@@ -1,0 +1,72 @@
+{
+    "name": "kartik-v/yii2-app-practical-a",
+    "description": "Yii 2 Practical A Application Template",
+    "keywords": ["yii2", "framework", "practical", "practical-a", "advanced", "application template"],
+    "homepage": "http://demos.krajee.com/app-practical-a",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Kartik Visweswaran",
+            "email": "kartikv2@gmail.com",
+            "homepage": "http://www.krajee.com/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-symfonymailer": "~2.0.3",
+        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-bootstrap4": "^2.0",
+        "mdmsoft/yii2-admin": "~2.0",
+        "kartik-v/yii2-builder": "dev-master",
+        "kartik-v/yii2-tabs-x": "dev-master",
+        "daxslab/yii2-taggedview": "*",
+        "kartik-v/yii2-popover-x": "dev-master",
+        "kartik-v/yii2-mpdf": "dev-master",
+        "kartik-v/yii2-editable": "dev-master",
+        "kartik-v/yii2-grid": "dev-master",
+        "kartik-v/yii2-widgets": "dev-master",
+        "mdmsoft/yii2-format-converter": "~1.0",
+        "mdmsoft/yii2-ar-behaviors": "~1.0",
+        "mdmsoft/yii2-widgets": "~1.0",
+        "kartik-v/yii2-datecontrol": "dev-master",
+        "johnitvn/yii2-ajaxcrud": "*",
+        "kartik-v/yii2-editors": "@dev",
+        "yiisoft/yii2-jui": "2.0.x-dev",
+        "miloschuman/yii2-highcharts-widget": "*",
+        "2amigos/yii2-chartjs-widget" : "~2.0",
+        "coderius/yii2-hit-counter": "dev-master",
+        "nnnick/chartjs": "dev-master",
+        "vilochane/yii2-barcode-generator":"*",
+        "himiklab/yii2-recaptcha-widget": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

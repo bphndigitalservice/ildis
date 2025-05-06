@@ -1,0 +1,37 @@
+/*Search styles*/
+.search-form_label{ width: 100%; display: block; padding: 10px 50px 10px 10px; background: trancparent; border: 1px solid #c9c9c9; }
+.search-form_input{ outline: none; background-color: transparent; border: none; -webkit-appearance: none; border-radius: 0; vertical-align: baseline; box-shadow: none; color: #000; display: block; width: 100%; font-size: 14px; line-height: 16px; height: 37px; }
+.search-form + *{ margin-top: 25px; }
+.search-form.on{ display: block; }
+.search-form_submit { background: none; border:none; cursor: pointer; margin-top: 7px; }
+
+.search-frame,.search-frame body{ width: 100%; height: auto; background: transparent; }
+.search-frame,.search-frame body,.search-frame h1,.search-frame h2,.search-frame h3,.search-frame h4,.search-frame h5,.search-frame h6,.search-frame p,.search-frame em{ margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: top; }
+.search-frame img{ max-width: 100%; height: auto; }
+.search-frame a{ color: inherit; text-decoration: none; -moz-transition: 0.3s all ease; -webkit-transition: 0.3s all ease; -o-transition: 0.3s all ease; transition: 0.3s all ease; }
+.search-frame a:active{ background: transparent; }
+.search-frame a:focus{ outline: none; }
+.search-frame h4{ font-size: 20px; text-transform: none; margin-bottom: 10px; }
+.search-frame h4 a:hover{ color: #000; }
+.search-frame .search_list{ margin: 0; padding: 0; border: 0; vertical-align: top; list-style-type: none; counter-reset: num1; }
+.search-frame .search_list p{ font-size: 15px; }
+.search-frame .search_list .match{ color: #000; font-size: 12px; display: block; }
+.search-frame .search_list li{ padding: 20px 20px 20px 40px; position: relative; -moz-transition: 0.3s all ease; -webkit-transition: 0.3s all ease; -o-transition: 0.3s all ease; transition: 0.3s all ease; }
+.search-frame .search_list li:hover{ background: rgba(78, 84, 200,0.1); }
+.search-frame .search_list li:before{ color: #000; content: counter(num1) '.'; font-weight: 600; counter-increment: num1; position: absolute; left: 5px; top: 15px; font-size: 20px; line-height: inherit; }
+.search-frame .search_list li + li{ border-top: 3px solid #000; }
+.search-frame .search{ color: #000; font-weight: 700; }
+.search-frame .match{ color: #222533; font-size: 12px; display: block; }
+.search-frame * + p{ margin-top: 16px; }
+.search-frame .content{ padding-top: 40px; padding-bottom: 40px; }
+.search-frame .search_head{ padding-bottom: 25px; }
+
+@media screen and (max-width: 991px) {
+	.search-frame h4 { font-size: 18px; margin-bottom: 8px; }
+	.search-frame .search_list li:before { font-size: 18px; top: 19px; }
+}
+
+@media screen and (max-width: 767px) {
+	.search-frame h4 { font-size: 16px; margin-bottom: 5px; }
+	.search-frame .search_list li:before { font-size: 16px; top: 20px; }
+}
