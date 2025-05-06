@@ -40,7 +40,7 @@
     "autoprefixer": "^9.7.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.5",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.3.6",
     "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
     "chromedriver": "^136.0.0",
