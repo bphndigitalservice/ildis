@@ -43,7 +43,7 @@
     "bootstrap": "^4.4.1",
     "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
-    "chromedriver": "^2.45.0",
+    "chromedriver": "^136.0.0",
     "clean-webpack-plugin": "^2.0.2",
     "concurrently": "^4.1.2",
     "copy-webpack-plugin": "^5.1.1",
