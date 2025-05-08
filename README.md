@@ -28,3 +28,10 @@ ILDIS adalah aplikasi terbuka yang memungkinkan instansi pemerintah pusat maupun
 ---
 
 > ILDIS dikembangkan oleh **Pusat Data dan Teknologi Informasi** & **Badan Pembinaan Hukum Nasional** Kementerian Hukum Republik Indonesia sebagai bentuk dukungan terhadap keterbukaan informasi hukum dan penguatan kelembagaan JDIHN.
+
+
+## Contributing
+
+If you've ever wanted to contribute to open source, and a great cause, now is your chance!
+
+See the [contributing docs](CONTRIBUTING.md) for more information
