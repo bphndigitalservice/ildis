@@ -39,8 +39,8 @@ phpunit.phar
 /.vagrant
 
 # root files
-/index.php
-/index-test.php
+!/index.php
+!/index-test.php
 /robots.txt
 
 # config file
