@@ -82,8 +82,8 @@ class UserController extends BaseUserController
             return $this->redirect(['profile', 'id' => \Yii::$app->user->identity->id]);
         }
 
-        $changepassword = new ChangePassword();
-        if ($changepassword->load(Yii::$app->getRequest()->post()) && $changepassword->change()) {
+        $changePassword = new ChangePassword();
+        if ($changePassword->load(\Yii::$app->getRequest()->post()) && $changePassword->change()) {
             \Yii::$app->session->setFlash('success', 'ganti password berhasi, silahkan login dengan password yang baru');
             return $this->redirect(['profile', 'id' => $id]);
         }
@@ -96,7 +96,7 @@ class UserController extends BaseUserController
 
         return $this->render('view', [
             'model' => $model,
-            'changepassword' => $changepassword,
+            'changePassword' => $changePassword,
             'log' => $log,
         ]);
     }

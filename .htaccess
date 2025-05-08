@@ -35,7 +35,7 @@ Header set Permissions-Policy "geolocation=self"
 # Block access to backup and source files
 # This files may be left by some text/html editors and
 # pose a great security danger, when someone can access them
-<FilesMatch "(\.(bak|bat|config|sql|fla|md|psd|ini|log|sh|inc|swp|dist|env|gitignore)|~|init|composer\.json|composer\.lock)$">
+<FilesMatch "(\.(bak|bat|config|sql|fla|md|psd|ini|log|sh|inc|swp|dist)|~|init|composer\.json|composer\.lock)$">
   Order allow,deny
   Deny from all
   Satisfy All
@@ -55,4 +55,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
-
