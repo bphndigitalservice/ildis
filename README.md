@@ -12,6 +12,21 @@ ILDIS adalah aplikasi terbuka yang memungkinkan instansi pemerintah pusat maupun
 - Menyediakan antarmuka pengguna yang sederhana
 - Mengelola peran dan pengguna untuk tim pengelola dokumentasi hukum
 
+
+## 🧱 Vendor Legacy (Sementara)
+
+Untuk saat ini, ILDIS masih menggunakan *vendor dependencies* dari project legacy yang sudah dikompres dalam file `vendor.zip`. Hal ini dilakukan untuk menjaga **kompatibilitas** dan memastikan sistem tetap berjalan sembari kami melakukan refactor dan migrasi bertahap ke versi library terbaru.
+
+### 📥 Cara Pakai
+
+1. Unduh file `vendor.zip` di [sini](https://box.bphn.go.id/index.php/s/Dbw9tX6b2RzA5ij).
+2. Ekstrak file tersebut ke dalam folder `vendor/` di root project.
+3. Lewati perintah `composer install` (untuk sementara waktu).
+
+> ⚠️ Kami sedang dalam proses menyesuaikan ILDIS agar bisa menggunakan dependensi terbaru tanpa breaking compatibility. Kontribusi untuk refactor dan modernisasi sangat dibutuhkan.
+
+
+
 ## 📝 TODO
 
 - [ ] Membuat instalasi di _production_ lebih mudah (misalnya dengan Docker atau installer GUI sederhana)
