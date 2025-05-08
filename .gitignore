@@ -45,3 +45,8 @@ phpunit.phar
 
 # config file
 .env
+
+
+# log
+/frontend/runtime/logs/**
+/backend/runtime/logs/**

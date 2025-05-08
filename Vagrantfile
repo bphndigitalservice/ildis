@@ -2,8 +2,8 @@ require 'yaml'
 require 'fileutils'
 
 domains = {
-  frontend: 'y2aa-frontend.dev',
-  backend:  'y2aa-backend.dev'
+  frontend: 'ildis-frontend.test',
+  backend:  'ildis-backend.test'
 }
 
 config = {
@@ -25,11 +25,12 @@ end
 # vagrant configurate
 Vagrant.configure(2) do |config|
   # select the box
-  config.vm.box = 'bento/ubuntu-16.04'
+  config.vm.box = 'bento/ubuntu-22.04'
 
   # should we ask about box updates?
   config.vm.box_check_update = options['box_check_update']
 
+# if options['provider'] == 'virtualbox'
   config.vm.provider 'virtualbox' do |vb|
     # machine cpus count
     vb.cpus = options['cpus']
@@ -38,6 +39,7 @@ Vagrant.configure(2) do |config|
     # machine name (for VirtualBox UI)
     vb.name = options['machine_name']
   end
+
 
   # machine name (for vagrant console)
   config.vm.define options['machine_name']
