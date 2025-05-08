@@ -50,3 +50,5 @@ phpunit.phar
 # log
 /frontend/runtime/logs/**
 /backend/runtime/logs/**
+/assets/**
+/backend/assets/**

@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
@@ -14,7 +15,8 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'admin' => [
-            'class' => 'mdm\admin\Module',
+            'class' => 'backend\modules\admin\Module',
+            'viewPath' => '@backend/modules/admin/views',
         ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module',
