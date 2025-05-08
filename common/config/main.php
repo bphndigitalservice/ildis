@@ -16,6 +16,19 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
         ],
+        'reCaptcha' => [
+            'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+            'siteKey' => getenv('RECAPTCHA_SITE_KEY'),
+            'secret' => getenv('RECAPTCHA_SECRET_KEY'),
+            'name' => 'reCaptcha',
+            'options' => [
+                'theme' => 'light',
+                'type' => 'image',
+                'size' => 'normal',
+                'hl' => null,
+            ],
+        ],
+
     ],
 
     'modules' => [
