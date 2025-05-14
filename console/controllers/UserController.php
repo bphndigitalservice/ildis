@@ -12,7 +12,7 @@ use yii\helpers\ArrayHelper;
 
 class UserController extends Controller
 {
-    public function actionCreateInteractive()
+    public function actionCreate()
     {
         $username = $this->prompt('Username:', [
             'required' => true,
@@ -31,7 +31,7 @@ class UserController extends Controller
 
         $password = $this->prompt('Password:', [
             'required' => true,
-           'mask' => '*',
+            'mask' => '*',
             'validator' => function ($input, &$error) {
                 if (strlen($input) < 6) {
                     $error = 'Password must be at least 6 characters long.';
