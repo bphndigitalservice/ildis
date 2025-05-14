@@ -47,6 +47,11 @@ phpunit.phar
 .env
 
 
-# generated files
-/assets/**
-/backend/assets/**
+# Ignore all files under assets, but keep the directory
+/assets/*
+!/assets/.gitkeep
+
+# Ignore all files under backend/assets, but keep the directory
+/backend/assets/*
+!/backend/assets/.gitkeep
+
