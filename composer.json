@@ -48,7 +48,9 @@
         "coderius/yii2-hit-counter": "dev-master",
         "nnnick/chartjs": "dev-master",
         "vilochane/yii2-barcode-generator":"*",
-        "himiklab/yii2-recaptcha-widget": "*"
+        "himiklab/yii2-recaptcha-widget": "*",
+      "ext-json": "*",
+      "ext-openssl": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

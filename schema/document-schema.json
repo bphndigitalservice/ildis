@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "idData": {
+      "type": "string"
+    },
+    "tahun_pengundangan": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "tanggal_penetapan": {
+      "type": "string",
+      "format": "date"
+    },
+    "tanggal_pengundangan": {
+      "type": "string",
+      "format": "date"
+    },
+    "jenis": {
+      "type": "string"
+    },
+    "noPeraturan": {
+      "type": "string"
+    },
+    "judul": {
+      "type": "string"
+    },
+    "noPanggil": {
+      "type": ["string", "null"]
+    },
+    "singkatanJenis": {
+      "type": "string"
+    },
+    "tempatTerbit": {
+      "type": "string"
+    },
+    "penerbit": {
+      "type": ["string", "null"]
+    },
+    "deskripsiFisik": {
+      "type": ["string", "null"]
+    },
+    "sumber": {
+      "type": "string"
+    },
+    "isbn": {
+      "type": ["string", "null"]
+    },
+    "status": {
+      "type": "string"
+    },
+    "bahasa": {
+      "type": "string"
+    },
+    "bidangHukum": {
+      "type": "string"
+    },
+    "teuBadan": {
+      "type": ["string", "null"]
+    },
+    "nomorIndukBuku": {
+      "type": ["string", "null"]
+    },
+    "abstrak": {
+      "type": "string"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "urlAbstrak": {
+      "type": "string",
+      "format": "uri"
+    },
+    "urlDetailPeraturan": {
+      "type": "string",
+      "format": "uri"
+    },
+    "fileDownload": {
+      "type": "string"
+    },
+    "urlDownload": {
+      "type": "string"
+    },
+    "subjek": {
+      "type": "string"
+    },
+    "operasi": {
+      "type": "string"
+    },
+    "display": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "idData",
+    "tahun_pengundangan",
+    "tanggal_penetapan",
+    "tanggal_pengundangan",
+    "jenis",
+    "noPeraturan",
+    "judul",
+    "singkatanJenis",
+    "tempatTerbit",
+    "sumber",
+    "status",
+    "bahasa",
+    "bidangHukum",
+    "abstrak",
+    "last_updated",
+    "urlAbstrak",
+    "urlDetailPeraturan",
+    "fileDownload",
+    "urlDownload",
+    "operasi",
+    "display"
+  ]
+}

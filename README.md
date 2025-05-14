@@ -13,16 +13,6 @@ ILDIS adalah aplikasi terbuka yang memungkinkan instansi pemerintah pusat maupun
 - Mengelola peran dan pengguna untuk tim pengelola dokumentasi hukum
 
 
-## 🧱 Vendor Legacy (Sementara)
-
-Untuk saat ini, ILDIS masih menggunakan *vendor dependencies* dari project legacy yang sudah dikompres dalam file `vendor.zip`. Hal ini dilakukan untuk menjaga **kompatibilitas** dan memastikan sistem tetap berjalan sembari kami melakukan refactor dan migrasi bertahap ke versi library terbaru.
-
-### 📥 Cara Pakai
-
-1. Unduh file `vendor.zip` di [sini](https://box.bphn.go.id/index.php/s/Dbw9tX6b2RzA5ij).
-2. Ekstrak file tersebut ke dalam folder `vendor/` di root project.
-3. Lewati perintah `composer install` (untuk sementara waktu).
-
 > ⚠️ Kami sedang dalam proses menyesuaikan ILDIS agar bisa menggunakan dependensi terbaru tanpa breaking compatibility. Kontribusi untuk refactor dan modernisasi sangat dibutuhkan.
 
 
@@ -32,7 +22,16 @@ Untuk saat ini, ILDIS masih menggunakan *vendor dependencies* dari project legac
 - [ ] Membuat instalasi di _production_ lebih mudah (misalnya dengan Docker atau installer GUI sederhana)
 - [ ] Update library dengan **CVE** agar sistem lebih aman dan terjaga dari kerentanan
 - [ ] Panduan pengembangan lokal
+- [ ] Update ke Versi Yii 2.0.52
+- [ ] Update ke PHP 8.1
 
 ---
 
 > ILDIS dikembangkan oleh **Pusat Data dan Teknologi Informasi** & **Badan Pembinaan Hukum Nasional** Kementerian Hukum Republik Indonesia sebagai bentuk dukungan terhadap keterbukaan informasi hukum dan penguatan kelembagaan JDIHN.
+
+
+## Contributing
+
+If you've ever wanted to contribute to open source, and a great cause, now is your chance!
+
+See the [contributing docs](CONTRIBUTING.md) for more information

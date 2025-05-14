@@ -39,14 +39,14 @@ phpunit.phar
 /.vagrant
 
 # root files
-!/index.php
-!/index-test.php
+/index.php
+/index-test.php
 /robots.txt
 
 # config file
 .env
 
 
-# log
-/frontend/runtime/logs/**
-/backend/runtime/logs/**
+# generated files
+/assets/**
+/backend/assets/**

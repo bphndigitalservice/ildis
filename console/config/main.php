@@ -30,6 +30,19 @@ return [
                 ],
             ],
         ],
+        'user' => [
+            'class' => 'yii\web\User',
+            'identityClass' => 'common\models\User',
+            'enableAutoLogin' => false,
+        ],
+        'urlManager' => [
+            'class' => 'yii\web\UrlManager',
+            'baseUrl' => getenv('PUBLIC_DOMAIN'),
+            'hostInfo' => getenv('public_domain'),
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
+
     ],
     'params' => $params,
 ];
