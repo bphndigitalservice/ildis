@@ -19,11 +19,14 @@ ILDIS adalah aplikasi terbuka yang memungkinkan instansi pemerintah pusat maupun
 
 ## 📝 TODO
 
-- [ ] Membuat instalasi di _production_ lebih mudah (misalnya dengan Docker atau installer GUI sederhana)
-- [ ] Update library dengan **CVE** agar sistem lebih aman dan terjaga dari kerentanan
-- [ ] Panduan pengembangan lokal
-- [ ] Update ke Versi Yii 2.0.52
-- [ ] Update ke PHP 8.1
+- [x] Membuat instalasi di _production_ lebih mudah (misalnya dengan Docker atau installer GUI sederhana)
+- [x] Update library dengan **CVE** agar sistem lebih aman dan terjaga dari kerentanan
+- [x] Panduan pengembangan lokal
+- [x] Update ke Versi Yii 2.0.52
+- [x] Update ke PHP 8.1
+- [ ] Migration Script untuk database yang sudah ada
+- [ ] Headless mode untuk flexibilitas frontend
+- [ ] Dokumentasi API yang lebih lengkap
 
 ---
 
