@@ -50,3 +50,5 @@ phpunit.phar
 # generated files
 /assets/**
 /backend/assets/**
+
+node_modules/
