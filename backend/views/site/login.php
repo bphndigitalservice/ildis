@@ -46,7 +46,7 @@ $fieldOptions2 = [
 
             <p class="login-box-msg">Silahkan Login</p>
 
-            <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
+            <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => true,'enableAjaxValidation' => false,]); ?>
 
             <?= $form
                 ->field($model, 'username', $fieldOptions1)
@@ -57,9 +57,12 @@ $fieldOptions2 = [
                 ->field($model, 'password', $fieldOptions2)
                 ->label(false)
                 ->passwordInput(['autocomplete' => 'off', 'placeholder' => $model->getAttributeLabel('password')]) ?>
-             <?= $form->field($model, 'reCaptcha')->widget(
-                \himiklab\yii2\recaptcha\ReCaptcha::className(),
-                ['siteKey' => '6LeBYooqAAAAAFsgWWsCwqA_7hVCbFaTya3hLkcV']) ?>
+            <?= $form->field($model, 'reCaptcha', [
+                'template' => '{input}',
+            ])->widget(
+                \himiklab\yii2\recaptcha\ReCaptcha3::className(),
+                ['siteKey' => Yii::$app->params['recaptcha.siteKey']]
+            ) ?>
 
             <div class="row">
                 <div class="col-xs-8">

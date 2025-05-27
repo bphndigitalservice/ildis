@@ -45,3 +45,10 @@ phpunit.phar
 
 # config file
 .env
+
+
+# generated files
+/assets/**
+/backend/assets/**
+
+node_modules/

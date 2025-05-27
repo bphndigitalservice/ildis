@@ -42,41 +42,47 @@ class LoginForm extends Model
      */
     public function validatePassword($attribute, $params)
     {
-        if (!$this->hasErrors()) {
-            $user = $this->getUser();
+        if ($this->hasErrors()) {
+            return;
+        }
 
-            $failedLogins = Yii::$app->cache->get("failed_logins_{$username}") ?: 0;
+        $user = $this->getUser();
+        $username = $this->username;
+        $cacheKey = "failed_logins_{$username}";
+        $failedLogins = Yii::$app->cache->get($cacheKey) ?: 0;
+
+        date_default_timezone_set('Asia/Jakarta');
+        $now = time();
+
+        if ($user) {
+
+            if ($user->suspended_until && strtotime($user->suspended_until) > $now) {
+                $remaining = strtotime($user->suspended_until) - $now;
+                $minutesLeft = ceil($remaining / 60);
+                $this->addError($attribute, "Akun ditangguhkan. Coba lagi dalam {$minutesLeft} menit.");
+                return;
+            }
+
+
+            if (!$user->validatePassword($this->password)) {
+                $failedLogins++;
+                Yii::$app->cache->set($cacheKey, $failedLogins, 300);
+
+                if ($failedLogins >= 3) {
+                    // Suspend akun
+                    $user->suspended_until = date('Y-m-d H:i:s', $now + 300);
+                    $user->save(false);
+                    Yii::$app->cache->delete($cacheKey);
+                    $this->addError($attribute, "Akun ditangguhkan selama 5 menit karena salah login 3x berturut-turut.");
+                } else {
+                    $this->addError($attribute, "Kesalahan username atau password. Sisa percobaan login: " . (3 - $failedLogins));
+                }
+            }
+        } else {
+            // Username tidak ditemukan
             $failedLogins++;
-
-            date_default_timezone_set('Asia/Jakarta');
-            $currentTimestamp = time();
-
-            if($user)
-            {
-                date_default_timezone_set('Asia/Jakarta');
-                $currentTimestamp = time();
-                if ($user->suspended_until && strtotime($user->suspended_until) > $currentTimestamp) {
-                    $remainingTime = strtotime($user->suspended_until) - $currentTimestamp;
-                    $this->addError($attribute, "Akun ditangguhkan karena salah username/password. Silakan coba lagi dalam " . ceil($remainingTime / 60) . " menit.");
-                }
-                else if (!$user->validatePassword($this->password)) {
-                    Yii::$app->cache->set("failed_logins_{$username}", $failedLogins, 300);
-                    if ($failedLogins >= 3) {
-                        // Suspend the user for 5 minutes
-                        $user->suspended_until = date('Y-m-d H:i:s', $currentTimestamp + 300); // 5 minutes
-                        $user->save(false);
-
-                        Yii::$app->cache->delete("failed_logins_{$username}"); // Reset attempts
-                        $this->addError($attribute, 'Akun ditangguhkan selama 5 menit karena kesalahan login.');
-                    } 
-                    else
-                        $this->addError($attribute, 'Kesalahan username atau password. Sisa '. (3 - $failedLogins) . 'x percobaan login.');
-                }
-            }
-            else {
-                Yii::$app->cache->set("failed_logins_{$username}", $failedLogins, 300);
-                $this->addError($attribute, 'Kesalahan username atau password. Sisa '. (3 - $failedLogins) . 'x percobaan login.');
-            }
+            Yii::$app->cache->set($cacheKey, $failedLogins, 300);
+            $this->addError($attribute, "Kesalahan username atau password. Sisa percobaan login: " . (3 - $failedLogins));
         }
     }
 

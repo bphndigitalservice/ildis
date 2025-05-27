@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
@@ -8,13 +9,14 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
-    'name' => 'djpp',
+    'name' => 'ildis',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
         'admin' => [
-            'class' => 'mdm\admin\Module',
+            'class' => 'backend\modules\admin\Module',
+            'viewPath' => '@backend/modules/admin/views',
         ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module',
@@ -27,6 +29,11 @@ return [
 
     'components' => [
 
+        'reCaptcha' => [
+            'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
+            'siteKeyV3' => Yii::$app->params['recaptcha.siteKey'],
+            'secretV3' => Yii::$app->params['recaptcha.secretKey'],
+        ],
         //  'formatter' => [
         //   'class' => 'yii\i18n\Formatter',
         //   'nullDisplay' => '',
@@ -45,10 +52,6 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
         ],
-
-        'authManager' => [
-            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
-        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -60,7 +63,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'djpp-backend',
+            'name' => 'ildis-backend',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -89,6 +92,7 @@ return [
             ],
         ],
     ],
+
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [

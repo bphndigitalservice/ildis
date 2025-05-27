@@ -1,0 +1,23 @@
+{
+  "name": "ildis",
+  "version": "4.0.0",
+  "description": "🇮🇩 ILDIS adalah sistem informasi dokumentasi hukum Indonesia yang dikembangkan untuk membantu anggota JDIHN (Jaringan Dokumentasi dan Informasi Hukum Nasional) mengelola data dokumen hukum secara mandiri, efisien, dan sesuai standar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bphndigitalservice/ildis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bphndigitalservice/ildis/issues"
+  },
+  "homepage": "https://github.com/bphndigitalservice/ildis#readme",
+  "devDependencies": {
+    "semantic-release": "^24.2.3"
+  }
+}
