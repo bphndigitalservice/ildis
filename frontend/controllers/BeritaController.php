@@ -10,14 +10,10 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
-/**
- * BeritaController implements the CRUD actions for Berita model.
- */
 class BeritaController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
+    const KEMENTERIAN_ID = '11e449f371bb47e09607313231373436';
+
     public function behaviors()
     {
         return [
@@ -30,35 +26,20 @@ class BeritaController extends Controller
         ];
     }
 
-    /**
-     * Lists all Berita models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new BeritaSearch();
-        /*
-        $searchModel = new BeritaSearch(['id'=>\Yii::$app->user->identity->direktorat_id]);
-        $dataProvider->query->andWhere(['id'=>[2,3,4]]);
-        */
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
-    /**
-     * Displays a single Berita model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         $searchModel = new BeritaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('view', [
             'model' => $this->findModel($id),
             'dataProvider' => $dataProvider,
@@ -66,39 +47,10 @@ class BeritaController extends Controller
         ]);
     }
 
-    /**
-     * Creates a new Berita model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-    
     public function actionCreate()
     {
         $model = new Berita();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-    }
-     */
-
-    public function actionCreate()
-    {
-        $model = new Berita();
-
         if ($model->load(Yii::$app->request->post())) {
-            /*
-            isi parameter tambahan
-            
-            $model->id = md5(uniqid(mt_rand(), true));
-            $jenis = $_POST['Berita']['field']);    
-            $model->tahun_ln =  date('Y', strtotime($_POST['Peraturan']['tgl_diundangkan']));
-            */
-
-
             if ($model->save()) {
                 Yii::$app->session->setFlash('success', 'Data Berita berhasil ditambahkan');
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -113,17 +65,9 @@ class BeritaController extends Controller
         }
     }
 
-
-    /**
-     * Updates an existing Berita model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', 'Data Berita berhasil diubah');
             return $this->redirect(['view', 'id' => $model->id]);
@@ -134,12 +78,6 @@ class BeritaController extends Controller
         }
     }
 
-    /**
-     * Deletes an existing Berita model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         try {
@@ -152,44 +90,40 @@ class BeritaController extends Controller
         }
     }
 
-
-
-    /**
-     * Finds the Berita model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Berita the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Berita::findOne($id)) !== null) {
             return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
         }
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
 
     public function actionParent($id)
     {
-        if ($id == '11e449f371bb47e09607313231373436') {
-            $instansi = 'Kementerian';
-            $rows = \backend\models\peraturan\Institutions::find()->where(['jenis' => $instansi])->all();
-            echo "<option>Pilih Kementerian</option>";
-        } else {
-            $instansi = 'Lembaga';
-            $rows = \backend\models\peraturan\Institutions::find()->where(['jenis' => $instansi])->all();
-            echo "<option>Pilih Lembaga Non Kementerian</option>";
-        }
+        $isKementerian = ($id == self::KEMENTERIAN_ID);
+        $instansi = $isKementerian ? 'Kementerian' : 'Lembaga';
+        $optionText = $isKementerian ? 'Pilih Kementerian' : 'Pilih Lembaga Non Kementerian';
+        $institutions = $this->getInstitutionsByType($instansi);
 
-        // echo "<option>Pilih Kementerian/Lembaga</option>";
+        echo "<option>{$optionText}</option>";
 
-        if (count($rows) > 0) {
-            foreach ($rows as $row) {
-                echo "<option value='$row->id'>$row->nama</option>";
-            }
-        } else {
+        if (count($institutions) === 0) {
             echo "<option>Nenhum municipio cadastrado</option>";
+            return;
         }
+
+        foreach ($institutions as $institution) {
+            echo "<option value='{$institution->id}'>{$institution->nama}</option>";
+        }
+    }
+
+    /**
+     * Ambil institutions berdasarkan jenis.
+     * @param string $jenis
+     * @return array
+     */
+    private function getInstitutionsByType($jenis)
+    {
+        return \backend\models\peraturan\Institutions::find()->where(['jenis' => $jenis])->all();
     }
 }
