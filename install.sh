@@ -13,7 +13,7 @@
 set -euo pipefail
 
 # ── Configuration ──────────────────────────────────────────────────────────
-GITHUB_REPO="Pazella21/ildis"
+GITHUB_REPO="pazella21/ildis"
 GHCR_IMAGE="ghcr.io/${GITHUB_REPO}"
 COMPOSE_FILE="docker-compose.yml"
 ENV_FILE=".env"
