@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/Pazella21/ildis/compare/v1.2.0...v1.2.1) (2026-07-08)
+
+### Bug Fixes
+
+* hapus duplikat menu penyusunan PUU di migration ([099c6d4](https://github.com/Pazella21/ildis/commit/099c6d4d2a29ee7cde41aa5c4c806c7ce9ee04de))
+
 ## [1.2.0](https://github.com/Pazella21/ildis/compare/v1.1.3...v1.2.0) (2026-07-02)
 
 ### Features
