@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/Pazella21/ildis/compare/v1.2.1...v1.2.2) (2026-07-08)
+
+### Bug Fixes
+
+* lowercase GITHUB_REPO untuk ghcr.io ([1494110](https://github.com/Pazella21/ildis/commit/1494110e1fab9b5fbb509e625353e994791c6185))
+
 ## [1.2.1](https://github.com/Pazella21/ildis/compare/v1.2.0...v1.2.1) (2026-07-08)
 
 ### Bug Fixes
