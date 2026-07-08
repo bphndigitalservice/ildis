@@ -1,0 +1,20 @@
+api:
+  insecure: false
+
+providers:
+  docker:
+    exposedByDefault: false
+  file:
+    filename: "/etc/traefik/config/dynamic.yml"
+
+entryPoints:
+  web:
+    address: ":80"
+
+log:
+  filePath: "/var/log/traefik/traefik.log"
+  level: INFO
+
+accessLog:
+  filePath: "/var/log/traefik/access.log"
+  bufferingSize: 100

@@ -1,0 +1,13 @@
+
+http:
+  routers:
+    ildis:
+      entryPoints:
+        - web
+      rule: "Host(`localhost`)"
+      service: ildis
+  services:
+    ildis:
+      loadBalancer:
+        servers:
+          - url: "http://ildis_app:80"

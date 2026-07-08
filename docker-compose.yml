@@ -1,64 +1,119 @@
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: ildis_mysql
+  db:
+    image: mariadb:10.11
+    container_name: ildis_mariadb
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD must be set}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE:-ildis_v4}
       MYSQL_USER: ${DB_USER:-ildis}
-      MYSQL_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD must be set}
-    ports:
-       - "3306:3306"
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: [ "CMD-SHELL", "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD}" ]
+      test: [ "CMD-SHELL", "healthcheck.sh --connect --innodb_initialized" ]
       interval: 10s
       timeout: 5s
       retries: 5
 
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
-      mysql:
-        condition: service_healthy
+    networks:
+      - ildis_net
+
+  traefik:
+    image: traefik:v3.0
+    container_name: ildis_traefik
+    restart: unless-stopped
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.file.filename=/etc/traefik/config/dynamic.yml"
+      - "--entrypoints.web.address=:80"
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik/config.yml:/etc/traefik/config/dynamic.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./logs/traefik:/var/log/traefik
+    networks:
+      - ildis_net
     ports:
-      - "8080:80"
+      - "80:80"
+  app:
+    image: ghcr.io/pazella21/ildis:${ILDIS_IMAGE_TAG:-latest}
+    container_name: ildis_app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ildis.rule=Host(`${SSL_DOMAIN}`)"
+      - "traefik.http.routers.ildis.entrypoints=web"
+      - "traefik.http.services.ildis.loadbalancer.server.port=80"
+    networks:
+      - ildis_net
     volumes:
       - runtime:/var/www/runtime
       - backend-assets:/var/www/backend/web/assets
       - frontend-assets:/var/www/frontend/web/assets
       - backend-uploads:/var/www/backend/web/uploads
       - frontend-uploads:/var/www/frontend/web/uploads
-      # Optional: mount custom nginx config without rebuilding the image.
-      # Remove this line to use the default config baked into the image.
-      - ./docker/nginx/default.conf:/etc/nginx/http.d/default.conf:ro
+      - feed_data:/var/www/feed
+      - ./nginx/default.conf:/etc/nginx/http.d/default.conf:ro
+      - ./logs/nginx:/var/log/nginx
+      - app_logs:/var/www/runtime/logs
     environment:
       - S6_KEEP_ENV=1
       - YII_ENV=${YII_ENV:-prod}
       - YII_DEBUG=${YII_DEBUG:-false}
-      - DB_HOST=${DB_HOST:-mysql}
-      - DB_USER=${DB_USER:-root}
-      - DB_PASSWORD=${DB_PASSWORD:?DB_PASSWORD must be set}
+      - DB_HOST=db
+      - DB_USER=${DB_USER:-ildis}
+      - DB_PASSWORD=${DB_PASSWORD}
       - DB_DATABASE=${DB_DATABASE:-ildis_v4}
       - DB_DATABASE_PORT=${DB_DATABASE_PORT:-3306}
       - PUBLIC_DOMAIN=${PUBLIC_DOMAIN:-http://localhost:8080}
       - COOKIE_VALIDATION_KEY_BE=${COOKIE_VALIDATION_KEY_BE}
       - COOKIE_VALIDATION_KEY_FE=${COOKIE_VALIDATION_KEY_FE}
       - RECAPTCHA_ENABLED=${RECAPTCHA_ENABLED:-false}
-      - RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY}
-      - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+      - RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY:-}
+      - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY:-}
       - PHP_DISPLAY_ERRORS=Off
       - PHP_ERROR_REPORTING='E_ALL & ~E_DEPRECATED'
-    restart: unless-stopped
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost/" ]
       interval: 30s
       timeout: 10s
       retries: 3
+
+  cron:
+    image: ghcr.io/pazella21/ildis-cron:${ILDIS_IMAGE_TAG:-latest}
+    container_name: ildis_cron
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - feed_data:/var/www/feed
+    environment:
+      - YII_ENV=${YII_ENV:-prod}
+      - YII_DEBUG=${YII_DEBUG:-false}
+      - DB_HOST=db
+      - DB_USER=${DB_USER:-ildis}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE:-ildis_v4}
+      - DB_DATABASE_PORT=${DB_DATABASE_PORT:-3306}
+    stop_grace_period: 30s
+    healthcheck:
+      test: ["CMD", "test", "-f", "/var/www/feed/document.json"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    networks:
+      - ildis_net
+
+networks:
+  ildis_net:
+    driver: bridge
 
 volumes:
   mysql_data:
@@ -67,3 +122,5 @@ volumes:
   frontend-assets:
   backend-uploads:
   frontend-uploads:
+  feed_data:
+  app_logs:

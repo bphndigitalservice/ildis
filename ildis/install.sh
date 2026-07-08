@@ -13,7 +13,7 @@
 set -euo pipefail
 
 # ── Configuration ──────────────────────────────────────────────────────────
-GITHUB_REPO="bphndigitalservice/ildis"
+GITHUB_REPO="Pazella21/ildis"
 GHCR_IMAGE="ghcr.io/${GITHUB_REPO}"
 COMPOSE_FILE="docker-compose.yml"
 ENV_FILE=".env"
@@ -750,7 +750,7 @@ networks:
 services:
   app:
 COMPOSEEOF
-            echo "    image: ghcr.io/bphndigitalservice/ildis:${ILDIS_IMAGE_TAG:-latest}" >> "${INSTALL_DIR}/${COMPOSE_FILE}"
+            echo "    image: ghcr.io/pazella21/ildis:${ILDIS_IMAGE_TAG:-latest}" >> "${INSTALL_DIR}/${COMPOSE_FILE}"
             cat >> "${INSTALL_DIR}/${COMPOSE_FILE}" <<'COMPOSEEOF'
     container_name: ildis_app
     restart: unless-stopped
@@ -795,7 +795,7 @@ COMPOSEEOF
             cat >> "${INSTALL_DIR}/${COMPOSE_FILE}" <<'COMPOSEEOF'
   cron:
 COMPOSEEOF
-            echo "    image: ghcr.io/bphndigitalservice/ildis-cron:${ILDIS_IMAGE_TAG:-latest}" >> "${INSTALL_DIR}/${COMPOSE_FILE}"
+            echo "    image: ghcr.io/pazella21/ildis-cron:${ILDIS_IMAGE_TAG:-latest}" >> "${INSTALL_DIR}/${COMPOSE_FILE}"
             cat >> "${INSTALL_DIR}/${COMPOSE_FILE}" <<'COMPOSEEOF'
     container_name: ildis_cron
     restart: unless-stopped
@@ -844,7 +844,7 @@ services:
 ${DB_HEALTHCHECK}
 ${db_ports}
   app:
-    image: ghcr.io/bphndigitalservice/ildis:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_app
     restart: unless-stopped
     depends_on:
@@ -883,7 +883,7 @@ ${db_ports}
       retries: 3
 
   cron:
-    image: ghcr.io/bphndigitalservice/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_cron
     restart: unless-stopped
     depends_on:
@@ -923,7 +923,7 @@ EOF
             cat > "${INSTALL_DIR}/${COMPOSE_FILE}" <<COMPOSEEOF
 services:${traefik_service}
   app:
-    image: ghcr.io/bphndigitalservice/ildis:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_app
     restart: unless-stopped
 ${app_labels}${app_networks}
@@ -958,7 +958,7 @@ ${app_labels}${app_networks}
       retries: 3
 
   cron:
-    image: ghcr.io/bphndigitalservice/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_cron
     restart: unless-stopped
     volumes:
@@ -1000,7 +1000,7 @@ ${db_ports}
       - ildis_net
 ${traefik_service}
   app:
-    image: ghcr.io/bphndigitalservice/ildis:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_app
     restart: unless-stopped
     depends_on:
@@ -1038,7 +1038,7 @@ ${app_labels}${app_networks}
       retries: 3
 
   cron:
-    image: ghcr.io/bphndigitalservice/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis-cron:\${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_cron
     restart: unless-stopped
     depends_on:

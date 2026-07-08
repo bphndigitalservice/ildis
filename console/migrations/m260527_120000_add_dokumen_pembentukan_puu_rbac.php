@@ -95,19 +95,7 @@ class m260527_120000_add_dokumen_pembentukan_puu_rbac extends Migration
             'data' => serialize(['fa fa-file-text-o']),
         ]);
 
-        $penyusunanPuuId = (new \yii\db\Query())
-            ->select('id')
-            ->from('{{%menu}}')
-            ->where(['name' => 'Dokumen Penyusunan PUU', 'parent' => 16])
-            ->scalar();
-
-        $this->insert('{{%menu}}', [
-            'name' => 'Dokumen Penyusunan PUU',
-            'parent' => $penyusunanPuuId,
-            'route' => '/dokumen-pembentukan-puu/index',
-            'order' => 1,
-            'data' => serialize(['fa fa-file-text-o']),
-        ]);
+        
     }
 
     public function safeDown()
@@ -151,7 +139,7 @@ class m260527_120000_add_dokumen_pembentukan_puu_rbac extends Migration
 
         $this->delete('{{%menu}}', [
             'name' => 'Dokumen Penyusunan PUU',
-            'name' => 'Dokumen Penyusunan PUU',
+            
         ]);
 
         $this->delete('{{%menu}}', [
