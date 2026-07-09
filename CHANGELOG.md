@@ -1,3 +1,9 @@
+## [1.2.4](https://github.com/Pazella21/ildis/compare/v1.2.3...v1.2.4) (2026-07-09)
+
+### Bug Fixes
+
+* kembalikan repo ke BPHN setelah merge ([7fbb9e2](https://github.com/Pazella21/ildis/commit/7fbb9e23525834eda8060969e5eb425d5643a44f))
+
 ## [1.2.3](https://github.com/Pazella21/ildis/compare/v1.2.2...v1.2.3) (2026-07-09)
 
 ### Bug Fixes
