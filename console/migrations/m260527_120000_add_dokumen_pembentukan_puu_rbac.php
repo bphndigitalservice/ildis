@@ -93,6 +93,8 @@ class m260527_120000_add_dokumen_pembentukan_puu_rbac extends Migration
             'order' => 15,
             'data' => serialize(['fa fa-file-text-o']),
         ]);
+
+        
     }
 
     public function safeDown()
@@ -133,6 +135,11 @@ class m260527_120000_add_dokumen_pembentukan_puu_rbac extends Migration
         foreach ($routes as $route) {
             $this->delete('{{%auth_item}}', ['name' => $route]);
         }
+
+        $this->delete('{{%menu}}', [
+            'name' => 'Dokumen Penyusunan PUU',
+            'name' => 'Dokumen Penyusunan PUU',
+        ]);
 
         $this->delete('{{%menu}}', [
             'name' => 'Dokumen Penyusunan PUU',
