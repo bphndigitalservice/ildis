@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/Pazella21/ildis/compare/v1.2.2...v1.2.3) (2026-07-09)
+
+### Bug Fixes
+
+* perbaiki duplikat key di migration ([e35a967](https://github.com/Pazella21/ildis/commit/e35a967036b2cad466f4ce1e3523bc9444ba1d0c))
+
 ## [1.2.2](https://github.com/Pazella21/ildis/compare/v1.2.1...v1.2.2) (2026-07-08)
 
 ### Bug Fixes
