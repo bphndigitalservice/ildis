@@ -1,3 +1,38 @@
+## [1.2.2](https://github.com/Pazella21/ildis/compare/v1.2.1...v1.2.2) (2026-07-08)
+
+### Bug Fixes
+
+* lowercase GITHUB_REPO untuk ghcr.io ([1494110](https://github.com/Pazella21/ildis/commit/1494110e1fab9b5fbb509e625353e994791c6185))
+
+## [1.2.1](https://github.com/Pazella21/ildis/compare/v1.2.0...v1.2.1) (2026-07-08)
+
+### Bug Fixes
+
+* hapus duplikat menu penyusunan PUU di migration ([099c6d4](https://github.com/Pazella21/ildis/commit/099c6d4d2a29ee7cde41aa5c4c806c7ce9ee04de))
+
+## [1.2.0](https://github.com/Pazella21/ildis/compare/v1.1.3...v1.2.0) (2026-07-02)
+
+### Features
+
+* **a11y:** perbaiki aksesibilitas dan screen reader di frontend ([1eb8761](https://github.com/Pazella21/ildis/commit/1eb8761ab6060cb0eaa01e5caecebf16b5838827))
+* **frontend:** ikon statistik di topbar, hapus link survey di footer ([08c6155](https://github.com/Pazella21/ildis/commit/08c61550d1ee836480d2caba1b756b0d3931aa29))
+* **frontend:** tambah halaman statistik dokumen hukum dan pengunjung ([0370938](https://github.com/Pazella21/ildis/commit/03709384918a86a12d5db3ab5540d031b02b28c5))
+* **frontend:** tambah section dokumen terpopuler di homepage ([eec068d](https://github.com/Pazella21/ildis/commit/eec068d704cb3970008188c43561285300eda30e))
+* **frontend:** tampilkan dan catat jumlah dilihat/unduh di detail dokumen ([471e204](https://github.com/Pazella21/ildis/commit/471e204f2ad47350c10c1ef0288835a81ed04753))
+* **frontend:** widget aksesibilitas, statistik dokumen, ikon survey di topbar ([54b1515](https://github.com/Pazella21/ildis/commit/54b1515c7921bda4619fdb660d46f574fadde224))
+* request KAPUS - counter, terpopuler, a11y, statistik, survey IKM ([#52](https://github.com/Pazella21/ildis/issues/52)) ([b3eb4fb](https://github.com/Pazella21/ildis/commit/b3eb4fb74b5a0e2a5edb4be97a4b4d2dee9c326f))
+* **survey:** implementasi survey kepuasan masyarakat dan laporan hasil ([5acb8c3](https://github.com/Pazella21/ildis/commit/5acb8c3ba1d255b11f6d7561d538b698b7090eed))
+
+### Bug Fixes
+
+* **frontend:** perbaiki orderBy DocumentPopularityService untuk PHP 8.3 ([3fa6236](https://github.com/Pazella21/ildis/commit/3fa62362058be36613cd3e29cf3992bff6f34686))
+* **frontend:** perbaiki sintaks AOS init dan hapus import tidak terpakai ([de34f31](https://github.com/Pazella21/ildis/commit/de34f3193471b04d48044a7ff62a9bd1b402012a))
+
+### Maintenance
+
+* **release:** 4.15.1 [skip ci] ([1d15ef2](https://github.com/Pazella21/ildis/commit/1d15ef2b8c0c7df794ab64f5df49819aa806fe72))
+* **release:** 4.16.0 [skip ci] ([5efb213](https://github.com/Pazella21/ildis/commit/5efb213423967d7fc31d40e058b05ac1bbb505fb)), closes [#52](https://github.com/Pazella21/ildis/issues/52)
+
 ## [4.16.0](https://github.com/bphndigitalservice/ildis/compare/v4.15.1...v4.16.0) (2026-06-29)
 
 ### Features
