@@ -1,3 +1,9 @@
+## [1.2.5](https://github.com/Pazella21/ildis/compare/v1.2.4...v1.2.5) (2026-07-13)
+
+### Bug Fixes
+
+* kembalikan image reference docker compose ke ghcr.io/bphndigitalservice ([a83dc0d](https://github.com/Pazella21/ildis/commit/a83dc0d2cd6b21b281567f983f0740c5ea461685))
+
 ## [1.2.4](https://github.com/Pazella21/ildis/compare/v1.2.3...v1.2.4) (2026-07-09)
 
 ### Bug Fixes
