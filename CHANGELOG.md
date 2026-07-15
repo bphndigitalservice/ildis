@@ -1,3 +1,9 @@
+## [1.2.6](https://github.com/Pazella21/ildis/compare/v1.2.5...v1.2.6) (2026-07-15)
+
+### Bug Fixes
+
+* ganti referensi Pazella21 ke bphndigitalservice di install.sh dan quick-install.sh ([4a9437b](https://github.com/Pazella21/ildis/commit/4a9437b795c89a210afbfa5a02c413fcadf606e0))
+
 ## [1.2.5](https://github.com/Pazella21/ildis/compare/v1.2.4...v1.2.5) (2026-07-13)
 
 ### Bug Fixes
