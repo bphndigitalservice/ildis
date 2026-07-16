@@ -45,6 +45,8 @@ if (empty($this->params['description'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <?= $this->render('_google_analytics') ?>
+
 </head>
 
 
@@ -88,12 +90,6 @@ if (empty($this->params['description'])) {
     <!-- all js include end -->
 
     <?php $this->endBody() ?>
-
-    <!-- Google Analytics Start -->
-
-
-
-    <!-- Google Analytics End -->
 
 </body>
 
