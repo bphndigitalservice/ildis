@@ -1,3 +1,14 @@
+## [4.17.0](https://github.com/bphndigitalservice/ildis/compare/v4.16.0...v4.17.0) (2026-07-16)
+
+### Features
+
+* **frontend:** tambah template Google Analytics GA4 per satker ([8e0640c](https://github.com/bphndigitalservice/ildis/commit/8e0640c25a2b673eb078e4a8d4b95c5bc841c734))
+* template Google Analytics dan perbaikan statistik pengunjung ([#54](https://github.com/bphndigitalservice/ildis/issues/54)) ([864acb8](https://github.com/bphndigitalservice/ildis/commit/864acb8dfc1e868f99c8be64b52afc4bfd3e232b))
+
+### Bug Fixes
+
+* **visitor:** perbaiki agregasi dan hitungan unik pengunjung ([17e2599](https://github.com/bphndigitalservice/ildis/commit/17e259911c210cde82a20417e65571928f5e072e))
+
 ## [4.16.0](https://github.com/bphndigitalservice/ildis/compare/v4.15.1...v4.16.0) (2026-06-29)
 
 ### Features
