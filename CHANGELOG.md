@@ -1,3 +1,9 @@
+## [4.17.1](https://github.com/bphndigitalservice/ildis/compare/v4.17.0...v4.17.1) (2026-07-19)
+
+### Bug Fixes
+
+* **security:** fix vulnerability report  GHSA-prrm-3g6v-35vv ([655ec75](https://github.com/bphndigitalservice/ildis/commit/655ec75f2d921d9c379c7810ce14b2ac8ce7e5d5))
+
 ## [4.17.0](https://github.com/bphndigitalservice/ildis/compare/v4.16.0...v4.17.0) (2026-07-16)
 
 ### Features
