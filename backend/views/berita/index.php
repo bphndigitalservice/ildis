@@ -6,6 +6,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\widgets\Pjax;
+use common\components\HtmlSanitizer;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\BeritaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -63,6 +64,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Isi Berita',
                 'format' => 'raw',
                 'attribute' => 'isi',
+                'value' => function ($model) {
+                    return HtmlSanitizer::purify($model->isi);
+                },
             ],
             //'image:ntext',
             // 'status',
