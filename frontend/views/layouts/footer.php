@@ -52,6 +52,9 @@ $hasDynamicContent = !empty($navSections) || !empty($socialSections);
 $socialSection = !empty($socialSections) ? $socialSections[0] : null;
 $socialLinks = $socialSection ? $socialSection->activeLinks : [];
 
+$versionPath = dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'VERSION';
+$appVersion = file_exists($versionPath) ? trim(file_get_contents($versionPath)) : 'dev';
+
 ?>
 
 <!-- ======= Footer ======= -->
@@ -153,7 +156,7 @@ $socialLinks = $socialSection ? $socialSection->activeLinks : [];
     <div class="footer-bottom">
       <p class="footer-bottom__copy">
         &copy; <?= date('Y') ?> <?= Html::encode($cleanInstansi) ?>
-        powered by <a href="https://ildis.bphn.go.id" target="_blank" rel="noopener noreferrer" class="footer-bottom__ildis">ILDIS</a>
+        powered by <a href="https://ildis.bphn.go.id" target="_blank" rel="noopener noreferrer" class="footer-bottom__ildis">ILDIS</a> v<?= Html::encode($appVersion) ?>
       </p>
 
       <div class="footer-bottom__meta">
