@@ -1,3 +1,11 @@
+## [4.17.3](https://github.com/bphndigitalservice/ildis/compare/v4.17.2...v4.17.3) (2026-07-27)
+
+### Bug Fixes
+
+*  repository ([a64b91f](https://github.com/bphndigitalservice/ildis/commit/a64b91f2915c523db743066df5d6e2f92da4742f))
+* **assets:** restore missing adminlte and fontawesome dependencies via packagist ([282b766](https://github.com/bphndigitalservice/ildis/commit/282b766c76afa547c06d684e9845b123229906f9))
+* **deps:** upgrade yii2-debug for PHP 8.3 and restore adminlte widgets ([94de8f2](https://github.com/bphndigitalservice/ildis/commit/94de8f2314e09aa7cc70cef52799b8995000b69b))
+
 ## [4.17.2](https://github.com/bphndigitalservice/ildis/compare/v4.17.1...v4.17.2) (2026-07-27)
 
 ## [4.17.1](https://github.com/bphndigitalservice/ildis/compare/v4.17.0...v4.17.1) (2026-07-19)
