@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 
 class AdminLteAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/almasaeed2010/adminlte/dist';
+    public $sourcePath = '@vendor/bower/adminlte/dist';
     public $css = [
         'plugins/jvectormap/jquery-jvectormap-1.2.2.css',
         'css/AdminLTE.min.css',

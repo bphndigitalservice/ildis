@@ -51,9 +51,7 @@
         "himiklab/yii2-recaptcha-widget": "^2.0",
         "ext-json": "*",
         "ext-openssl": "*",
-        "yiisoft/yii2-shell": "^2.0",
-        "almasaeed2010/adminlte": "~2.4.0",
-        "fortawesome/font-awesome": "^4.7"
+        "yiisoft/yii2-shell": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -70,5 +68,11 @@
         "allow-plugins": {
             "yiisoft/yii2-composer": true
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }
