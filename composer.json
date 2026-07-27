@@ -21,12 +21,6 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "require": {
         "php": ">=8.3",
         "yiisoft/yii2": "~2.0.54",
