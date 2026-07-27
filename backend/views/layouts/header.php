@@ -91,19 +91,19 @@ echo
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-            <?= Html::img(\Yii::getAlias('@imageurl') . '/common/dokumen/' . \Yii::$app->user->identity->picture, ['class' => 'user-image', 'alt' => 'myImage', 'width' => '160', 'height' => 'auto']); ?>
+            <?= Html::img(\Yii::getAlias('@imageurl') . '/common/dokumen/' . (\Yii::$app->user->identity->picture ?? ''), ['class' => 'user-image', 'alt' => 'myImage', 'width' => '160', 'height' => 'auto']); ?>
 
-            <span class="hidden-xs"><?= \Yii::$app->user->identity->username ?></span>
+            <span class="hidden-xs"><?= \Yii::$app->user->identity->username ?? '' ?></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
               <?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt' => 'User Image']) ?>
               <p>
-                <?= \Yii::$app->user->identity->username ?>
+                <?= \Yii::$app->user->identity->username ?? '' ?>
               </p>
               <p>
-                <?= \Yii::$app->user->identity->email ?>
+                <?= \Yii::$app->user->identity->email ?? '' ?>
               </p>
             </li>
             <!-- Menu Body -->
@@ -114,7 +114,7 @@ echo
 
                 <?= Html::a(
                   'Profile',
-                  ['/admin/user/profile', 'id' => Yii::$app->user->identity->id],
+                  ['/admin/user/profile', 'id' => Yii::$app->user->identity->id ?? 0],
                   ['class' => 'btn btn-default btn-flat']
                 ) ?>
               </div>
