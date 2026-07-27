@@ -21,6 +21,12 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "require": {
         "php": ">=8.3",
         "yiisoft/yii2": "~2.0.54",
@@ -54,8 +60,8 @@
         "yiisoft/yii2-shell": "^2.0"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.2.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/codeception": "^5.1",
         "codeception/module-yii2": "^2.0",
