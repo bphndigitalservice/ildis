@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d34a222e54e508c4d551fb55f6c52e1",
+    "content-hash": "7e5b3236e60704daf5be0ed9525e1239",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -160,7 +160,7 @@
             "version": "5.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
                 "reference": "310a33557e2944daf86d5946a5e8c82b9118f8f7"
             },
             "dist": {
@@ -181,7 +181,7 @@
             "version": "3.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "fde1f76e2799dd877c176abde0ec836553246991"
             },
             "dist": {
@@ -231,29 +231,11 @@
             "type": "bower-asset"
         },
         {
-            "name": "bower-asset/typeahead.js",
-            "version": "v0.11.1",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:twitter/typeahead.js.git",
-                "reference": "588440f66559714280628a4f9799f0c4eb880a4a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twitter/typeahead.js/zipball/588440f66559714280628a4f9799f0c4eb880a4a",
-                "reference": "588440f66559714280628a4f9799f0c4eb880a4a"
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.7"
-            },
-            "type": "bower-asset"
-        },
-        {
             "name": "bower-asset/yii2-pjax",
             "version": "2.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yiisoft/jquery-pjax.git",
+                "url": "git@github.com:yiisoft/jquery-pjax.git",
                 "reference": "452b56b7124326487fd0d3be6b205fcaa66598a0"
             },
             "dist": {
@@ -6003,29 +5985,46 @@
         },
         {
             "name": "yiisoft/yii2-gii",
-            "version": "2.0.8",
+            "version": "2.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "c02adc552bcf3a0ef6f3694a9dcbf209f4885ab1"
+                "reference": "f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/c02adc552bcf3a0ef6f3694a9dcbf209f4885ab1",
-                "reference": "c02adc552bcf3a0ef6f3694a9dcbf209f4885ab1",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b",
+                "reference": "f17c7ef7ef3081213f612b37ad0ceaa8e8cd3d3b",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/typeahead.js": "0.10.* | ~0.11.0",
-                "phpspec/php-diff": ">=1.0.2",
-                "yiisoft/yii2": "~2.0.14",
-                "yiisoft/yii2-bootstrap": "~2.0.0"
+                "phpspec/php-diff": "^1.1.0",
+                "yiisoft/yii2": "~2.0.46"
+            },
+            "require-dev": {
+                "cweagans/composer-patches": "^1.7",
+                "phpunit/phpunit": "4.8.34",
+                "yiisoft/yii2-coding-standards": "~2.0"
             },
             "type": "yii2-extension",
             "extra": {
+                "patches": {
+                    "phpunit/phpunit": {
+                        "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
+                        "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch",
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php81.patch"
+                    },
+                    "phpunit/php-file-iterator": {
+                        "Fix PHP 8.1 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_path_file_iterator.patch"
+                    },
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
+                    }
+                },
                 "branch-alias": {
                     "dev-master": "2.0.x-dev"
-                }
+                },
+                "composer-exit-on-patch-failure": true
             },
             "autoload": {
                 "psr-4": {
@@ -6045,17 +6044,32 @@
             "description": "The Gii extension for the Yii framework",
             "keywords": [
                 "code generator",
+                "dev",
                 "gii",
                 "yii2"
             ],
             "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
+                "forum": "https://www.yiiframework.com/forum/",
+                "irc": "ircs://irc.libera.chat:6697/yii",
                 "issues": "https://github.com/yiisoft/yii2-gii/issues",
                 "source": "https://github.com/yiisoft/yii2-gii",
-                "wiki": "http://www.yiiframework.com/wiki/"
+                "wiki": "https://www.yiiframework.com/wiki/"
             },
-            "time": "2018-12-08T10:07:49+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/yiisoft/yii2-gii",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-02-13T21:21:17+00:00"
         },
         {
             "name": "yiisoft/yii2-httpclient",
@@ -9242,21 +9256,29 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.0.14",
+            "version": "2.1.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "dc5a4a8529de1a41dbb037dbabf1f3f93002f21d"
+                "reference": "0a2ce3cb91d36d5558c7189d9012795874e1ee60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/dc5a4a8529de1a41dbb037dbabf1f3f93002f21d",
-                "reference": "dc5a4a8529de1a41dbb037dbabf1f3f93002f21d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/0a2ce3cb91d36d5558c7189d9012795874e1ee60",
+                "reference": "0a2ce3cb91d36d5558c7189d9012795874e1ee60",
                 "shasum": ""
             },
             "require": {
-                "yiisoft/yii2": "~2.0.13",
-                "yiisoft/yii2-bootstrap": "~2.0.0"
+                "ext-mbstring": "*",
+                "php": ">=7.4",
+                "yiisoft/yii2": "~2.0.54"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "yiisoft/yii2-coding-standards": "~3.0",
+                "yiisoft/yii2-swiftmailer": "*"
             },
             "type": "yii2-extension",
             "extra": {
@@ -9277,22 +9299,41 @@
                 {
                     "name": "Qiang Xue",
                     "email": "qiang.xue@gmail.com"
+                },
+                {
+                    "name": "Simon Karlen",
+                    "email": "simi.albi@outlook.com"
                 }
             ],
             "description": "The debugger extension for the Yii framework",
             "keywords": [
                 "debug",
                 "debugger",
+                "dev",
                 "yii2"
             ],
             "support": {
-                "forum": "http://www.yiiframework.com/forum/",
-                "irc": "irc://irc.freenode.net/yii",
+                "forum": "https://www.yiiframework.com/forum/",
+                "irc": "ircs://irc.libera.chat:6697/yii",
                 "issues": "https://github.com/yiisoft/yii2-debug/issues",
                 "source": "https://github.com/yiisoft/yii2-debug",
-                "wiki": "http://www.yiiframework.com/wiki/"
+                "wiki": "https://www.yiiframework.com/wiki/"
             },
-            "time": "2018-09-23T21:41:04+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/yiisoft/yii2-debug",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-04-22T10:35:38+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -9390,5 +9431,5 @@
         "ext-openssl": "*"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
