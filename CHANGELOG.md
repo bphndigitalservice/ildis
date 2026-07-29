@@ -1,3 +1,11 @@
+## [4.18.0](https://github.com/bphndigitalservice/ildis/compare/v4.17.3...v4.18.0) (2026-07-29)
+
+### Features
+
+* **backend:** display application version from VERSION file in footer ([db5c011](https://github.com/bphndigitalservice/ildis/commit/db5c0117c4a9e4e9f3da6ce87a73cf728fb4773f))
+* **frontend:** display application version from VERSION file in footer ([156d96b](https://github.com/bphndigitalservice/ildis/commit/156d96b3e1d0f290c070cb5d0480e969ec9265a7))
+* implement version tag display in footer for both frontend and backend applications ([2b836d7](https://github.com/bphndigitalservice/ildis/commit/2b836d742629404e4fc5c751054e36c62d15fd7e))
+
 ## [4.17.3](https://github.com/bphndigitalservice/ildis/compare/v4.17.2...v4.17.3) (2026-07-27)
 
 ### Bug Fixes
