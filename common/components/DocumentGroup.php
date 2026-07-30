@@ -9,7 +9,7 @@ class DocumentGroup
     public static function labels(): array
     {
         return [
-            self::LEGISLATION_FORMATION => 'Dokumen Pembentukan PUU',
+            self::LEGISLATION_FORMATION => 'Dokumen Penyusunan PUU',
         ];
     }
 

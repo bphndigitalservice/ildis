@@ -38,7 +38,7 @@ services:
     ports:
       - "80:80"
   app:
-    image: ghcr.io/bphndigitalservice/ildis:${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis:${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_app
     restart: unless-stopped
     depends_on:
@@ -85,7 +85,7 @@ services:
       retries: 3
 
   cron:
-    image: ghcr.io/bphndigitalservice/ildis-cron:${ILDIS_IMAGE_TAG:-latest}
+    image: ghcr.io/pazella21/ildis-cron:${ILDIS_IMAGE_TAG:-latest}
     container_name: ildis_cron
     restart: unless-stopped
     depends_on:

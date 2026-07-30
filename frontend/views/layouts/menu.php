@@ -107,19 +107,7 @@ $menuItems = [
         'options' => ['class' => 'mobile-menu-item'],
         'template' => $linkTemplate('bi-newspaper'),
     ],
-    [
-        'label' => 'Link Terkait',
-        'url' => '#',
-        'options' => ['class' => 'dropdown mobile-menu-item'],
-        'activateItems' => true,
-        'activeCssClass' => 'active',
-        'template' => $parentLinkTemplate('bi-link-45deg'),
-
-        'items' => [
-            ['label' => 'jdihn.go.id', 'url' => Url::to('https://jdihn.go.id/')],
-            ['label' => 'bphn.go.id', 'url' => Url::to('https://bphn.go.id/')],
-        ]
-    ],
+   
     [
         'label' => 'Statistik dokumen hukum',
         'url' => ['/statistik'],

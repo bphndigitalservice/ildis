@@ -104,11 +104,11 @@ class DokumenPembentukanPuuController extends Controller
 
             $log->dokumen_id = $model->id;
             $log->controller = 'DokumenPembentukanPuu';
-            $log->aksi = 'Tambah Dokumen Pembentukan PUU';
-            $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan tambah data Dokumen Pembentukan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
+            $log->aksi = 'Tambah Dokumen Penyusunan PUU';
+            $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan tambah data Dokumen Penyusunan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
             $log->save();
 
-            Yii::$app->session->setFlash('success', 'Data Dokumen Pembentukan PUU berhasil ditambahkan');
+            Yii::$app->session->setFlash('success', 'Data Dokumen Penyusunan PUU berhasil ditambahkan');
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -153,10 +153,10 @@ class DokumenPembentukanPuuController extends Controller
                 $log = new LogPustakawan();
                 $log->dokumen_id = $id;
                 $log->controller = 'DokumenPembentukanPuu';
-                $log->aksi = 'Ubah Dokumen Pembentukan PUU';
-                $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan ubah data Dokumen Pembentukan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
+                $log->aksi = 'Ubah Dokumen Penyusunan PUU';
+                $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan ubah data Dokumen Penyusunan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
                 $log->save();
-                Yii::$app->session->setFlash('success', 'Data Dokumen Pembentukan PUU berhasil diubah');
+                Yii::$app->session->setFlash('success', 'Data Dokumen Penyusunan PUU berhasil diubah');
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
@@ -174,14 +174,14 @@ class DokumenPembentukanPuuController extends Controller
             $log = new LogPustakawan();
             $log->dokumen_id = $id;
             $log->controller = 'DokumenPembentukanPuu';
-            $log->aksi = 'Hapus Dokumen Pembentukan PUU';
-            $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan hapus data Dokumen Pembentukan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
+            $log->aksi = 'Hapus Dokumen Penyusunan PUU';
+            $log->keterangan = 'User ' . \Yii::$app->user->identity->username . ' melakukan hapus data Dokumen Penyusunan PUU pada ' . DateHelper::formatIndonesian(date('Y-m-d H:i:s'));
             $log->save();
 
-            Yii::$app->session->setFlash('danger', 'Data Dokumen Pembentukan PUU berhasil dihapus');
+            Yii::$app->session->setFlash('danger', 'Data Dokumen Penyusunan PUU berhasil dihapus');
             return $this->redirect(['index']);
         } catch (\yii\db\IntegrityException $e) {
-            Yii::$app->session->setFlash('error', 'Data Dokumen Pembentukan PUU Tidak Dapat Dihapus Karena Dipakai Modul Lain');
+            Yii::$app->session->setFlash('error', 'Data Dokumen Penyusunan PUU Tidak Dapat Dihapus Karena Dipakai Modul Lain');
             return $this->redirect(['index']);
         }
     }
@@ -191,13 +191,13 @@ class DokumenPembentukanPuuController extends Controller
         $model = $this->findModel($id);
         $model->is_publish = 0;
         if ($model->save(false)) {
-            Yii::$app->session->setFlash('danger', 'Verifikasi Dokumen Pembentukan PUU dibatalkan');
+            Yii::$app->session->setFlash('danger', 'Verifikasi Dokumen Penyusunan PUU dibatalkan');
         } else {
             Yii::error(
                 '[dokumen-pembentukan-puu/inactive] Failed to save model: ' . json_encode($model->getErrors()),
                 __METHOD__
             );
-            Yii::$app->session->setFlash('error', 'Gagal membatalkan verifikasi Dokumen Pembentukan PUU.');
+            Yii::$app->session->setFlash('error', 'Gagal membatalkan verifikasi Dokumen Penyusunan PUU.');
         }
         return $this->redirect(['index']);
     }

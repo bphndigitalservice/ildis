@@ -10,7 +10,6 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push:
@@ -22,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set lowercase image name
+        run: echo "IMAGE_NAME_LC=$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -41,7 +43,7 @@ jobs:
         id: meta-app
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -53,7 +55,7 @@ jobs:
         id: meta-cron
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-cron
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}-cron
           tags: |
             type=ref,event=branch
             type=ref,event=pr
@@ -94,8 +96,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:main
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -108,7 +110,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-cron:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-cron:main
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}-cron:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}-cron:main
           cache-from: type=gha
           cache-to: type=gha,mode=max

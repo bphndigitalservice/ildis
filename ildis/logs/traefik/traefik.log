@@ -1,0 +1,268 @@
+2026-07-08T06:34:39Z INF Traefik version 3.0.4 built on 2024-07-02T13:46:37Z version=3.0.4
+2026-07-08T06:34:39Z INF 
+Stats collection is disabled.
+Help us improve Traefik by turning this feature on :)
+More details on: https://doc.traefik.io/traefik/contributing/data-collection/
+
+2026-07-08T06:34:39Z INF Starting provider aggregator aggregator.ProviderAggregator
+2026-07-08T06:34:39Z INF Starting provider *file.Provider
+2026-07-08T06:34:39Z INF Starting provider *traefik.Provider
+2026-07-08T06:34:39Z INF Starting provider *acme.ChallengeTLSALPN
+2026-07-08T06:34:39Z INF Starting provider *docker.Provider
+2026-07-08T06:34:39Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:39Z ERR Provider error, retrying in 409.252621ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:40Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:40Z ERR Provider error, retrying in 446.080344ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:40Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:40Z ERR Provider error, retrying in 1.679198526s error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:43Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:43Z ERR Provider error, retrying in 2.074735628s error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:45Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:45Z ERR Provider error, retrying in 1.952109252s error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:47Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:47Z ERR Provider error, retrying in 5.44881982s error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:52Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:34:52Z ERR Provider error, retrying in 7.471560374s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:00Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:00Z ERR Provider error, retrying in 9.80699738s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:10Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:10Z ERR Provider error, retrying in 11.340664211s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:22Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:22Z ERR Provider error, retrying in 489.108708ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:22Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:22Z ERR Provider error, retrying in 686.061485ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:23Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:23Z ERR Provider error, retrying in 987.182612ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:24Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:24Z ERR Provider error, retrying in 1.269844609s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:25Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:25Z ERR Provider error, retrying in 3.739045575s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:29Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:29Z ERR Provider error, retrying in 2.307450036s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:32Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:32Z ERR Provider error, retrying in 5.392065927s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:37Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:37Z ERR Provider error, retrying in 7.620963261s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:45Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:45Z ERR Provider error, retrying in 8.186568748s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:53Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:53Z ERR Provider error, retrying in 525.745582ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:54Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:54Z ERR Provider error, retrying in 915.815116ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:55Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:55Z ERR Provider error, retrying in 1.042607256s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:56Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:56Z ERR Provider error, retrying in 994.07344ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:57Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:57Z ERR Provider error, retrying in 1.739602981s error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:59Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:35:59Z ERR Provider error, retrying in 2.557167455s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:01Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:01Z ERR Provider error, retrying in 3.645238876s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:05Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:05Z ERR Provider error, retrying in 10.139228489s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:18Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:18Z ERR Provider error, retrying in 13.263532893s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:31Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:31Z ERR Provider error, retrying in 579.164468ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:32Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:32Z ERR Provider error, retrying in 540.411057ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:32Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:32Z ERR Provider error, retrying in 1.05130074s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:33Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:33Z ERR Provider error, retrying in 1.711182087s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:35Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:35Z ERR Provider error, retrying in 2.184231239s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:37Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:37Z ERR Provider error, retrying in 3.374612942s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:41Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:41Z ERR Provider error, retrying in 8.091309162s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:50Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:50Z ERR Provider error, retrying in 8.53600448s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:58Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:58Z ERR Provider error, retrying in 11.742374091s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:10Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:10Z ERR Provider error, retrying in 519.444332ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:10Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:10Z ERR Provider error, retrying in 640.874302ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:11Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:11Z ERR Provider error, retrying in 968.146585ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:12Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:12Z ERR Provider error, retrying in 2.118063729s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:14Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:14Z ERR Provider error, retrying in 2.556460844s error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:23Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:36:23Z ERR Provider error, retrying in 2.25085483s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:20Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:20Z ERR Provider error, retrying in 4.868147733s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:25Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:25Z ERR Provider error, retrying in 7.068871026s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:32Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:32Z ERR Provider error, retrying in 18.352942115s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:51Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:51Z ERR Provider error, retrying in 733.46028ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:51Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:51Z ERR Provider error, retrying in 575.537159ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:52Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:52Z ERR Provider error, retrying in 1.110243937s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:53Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:53Z ERR Provider error, retrying in 1.514412001s error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:55Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:37:55Z ERR Provider error, retrying in 2.002758332s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:05Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:05Z ERR Provider error, retrying in 2.546577634s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:07Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:07Z ERR Provider error, retrying in 6.667090307s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:14Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:14Z ERR Provider error, retrying in 6.194841538s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:20Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:20Z ERR Provider error, retrying in 12.802883381s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:33Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:33Z ERR Provider error, retrying in 285.156748ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:33Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:33Z ERR Provider error, retrying in 826.312457ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:34Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:34Z ERR Provider error, retrying in 814.469632ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:35Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:35Z ERR Provider error, retrying in 1.978180991s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:37Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:37Z ERR Provider error, retrying in 3.071150267s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:40Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:40Z ERR Provider error, retrying in 4.455257718s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:45Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:45Z ERR Provider error, retrying in 4.184255297s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:49Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:49Z ERR Provider error, retrying in 7.121132422s error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:57Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:43:57Z ERR Provider error, retrying in 17.568127232s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:15Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:15Z ERR Provider error, retrying in 254.196671ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:15Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:15Z ERR Provider error, retrying in 889.17704ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:16Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:16Z ERR Provider error, retrying in 1.122916027s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:17Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:17Z ERR Provider error, retrying in 1.847665749s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:19Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:19Z ERR Provider error, retrying in 1.633752855s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:20Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:20Z ERR Provider error, retrying in 3.802878167s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:24Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:24Z ERR Provider error, retrying in 3.222963605s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:28Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:28Z ERR Provider error, retrying in 10.4555322s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:39Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:39Z ERR Provider error, retrying in 11.039339416s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:50Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:50Z ERR Provider error, retrying in 613.100346ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:50Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:50Z ERR Provider error, retrying in 979.8403ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:51Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:51Z ERR Provider error, retrying in 722.522247ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:52Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:52Z ERR Provider error, retrying in 1.790113846s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:54Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:54Z ERR Provider error, retrying in 1.838680247s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:56Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:56Z ERR Provider error, retrying in 3.115726741s error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:59Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:44:59Z ERR Provider error, retrying in 6.295647395s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:06Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:06Z ERR Provider error, retrying in 5.758238561s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:11Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:11Z ERR Provider error, retrying in 12.275313333s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:24Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:24Z ERR Provider error, retrying in 652.565992ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:24Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:24Z ERR Provider error, retrying in 1.025773607s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:25Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:25Z ERR Provider error, retrying in 1.189482067s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:27Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:27Z ERR Provider error, retrying in 1.460645814s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:29Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:29Z ERR Provider error, retrying in 2.17713755s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:31Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:31Z ERR Provider error, retrying in 4.320691488s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:36Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:36Z ERR Provider error, retrying in 7.561256589s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:43Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:43Z ERR Provider error, retrying in 8.116844475s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:51Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:51Z ERR Provider error, retrying in 16.219798018s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:10Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:10Z ERR Provider error, retrying in 547.397105ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:11Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:11Z ERR Provider error, retrying in 748.265051ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:12Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:12Z ERR Provider error, retrying in 645.83977ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:12Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:12Z ERR Provider error, retrying in 1.418667833s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:14Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:14Z ERR Provider error, retrying in 1.795465191s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:16Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:16Z ERR Provider error, retrying in 4.615031902s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:20Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:20Z ERR Provider error, retrying in 3.131164605s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:23Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:23Z ERR Provider error, retrying in 7.501428264s error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:39Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:45:39Z ERR Provider error, retrying in 18.561020229s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:52Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:52Z ERR Provider error, retrying in 376.522653ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:53Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:53Z ERR Provider error, retrying in 645.923185ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:53Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:53Z ERR Provider error, retrying in 1.340352476s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:55Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:55Z ERR Provider error, retrying in 1.800068984s error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:56Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:46:56Z ERR Provider error, retrying in 3.747832942s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:00Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:00Z ERR Provider error, retrying in 5.647266581s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:06Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:06Z ERR Provider error, retrying in 7.428628381s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:14Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:14Z ERR Provider error, retrying in 10.796465733s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:25Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:25Z ERR Provider error, retrying in 634.155392ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:25Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:25Z ERR Provider error, retrying in 743.176706ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:26Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:26Z ERR Provider error, retrying in 1.489746298s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:28Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:28Z ERR Provider error, retrying in 1.422318061s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:29Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:29Z ERR Provider error, retrying in 3.230896599s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:32Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:32Z ERR Provider error, retrying in 4.134820052s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:37Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:37Z ERR Provider error, retrying in 6.947195343s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:44Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:44Z ERR Provider error, retrying in 9.201211239s error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:54Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:47:54Z ERR Provider error, retrying in 9.249098893s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:03Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:03Z ERR Provider error, retrying in 424.523775ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:03Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:03Z ERR Provider error, retrying in 397.307382ms error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:04Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:04Z ERR Provider error, retrying in 1.651559501s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:06Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:06Z ERR Provider error, retrying in 1.477794926s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:08Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:08Z ERR Provider error, retrying in 2.960218521s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:11Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:11Z ERR Provider error, retrying in 4.221578188s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:15Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:15Z ERR Provider error, retrying in 5.589222152s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:21Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:21Z ERR Provider error, retrying in 9.899981878s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:31Z ERR Failed to retrieve information of the docker client and server host error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:31Z ERR Provider error, retrying in 7.925725636s error="Error response from daemon: " providerName=docker
+2026-07-08T06:48:39Z INF I have to go...
+2026-07-08T06:48:39Z INF Stopping server gracefully
+2026-07-08T06:48:39Z ERR error="accept tcp [::]:80: use of closed network connection" entryPointName=web
+2026-07-08T06:48:39Z ERR error="close tcp [::]:80: use of closed network connection" entryPointName=web
+2026-07-08T06:48:39Z INF Server stopped
+2026-07-08T06:48:39Z INF Shutting down
+2026-07-08T06:48:39Z ERR Cannot retrieve data error="context canceled" providerName=docker

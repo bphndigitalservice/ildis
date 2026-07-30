@@ -6,7 +6,7 @@ use kartik\grid\GridView;
 /* @var $model backend\models\Peraturan */
 
 $this->title = 'Detail Dokumen';
-$this->params['breadcrumbs'][] = ['label' => 'Dokumen Pembentukan PUU', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Dokumen Penyusunan PUU', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

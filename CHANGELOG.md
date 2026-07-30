@@ -1,3 +1,29 @@
+## [1.3.0](https://github.com/Pazella21/ildis/compare/v1.2.6...v1.3.0) (2026-07-30)
+
+### Features
+
+* **backend:** display application version from VERSION file in footer ([db5c011](https://github.com/Pazella21/ildis/commit/db5c0117c4a9e4e9f3da6ce87a73cf728fb4773f))
+* **frontend:** display application version from VERSION file in footer ([156d96b](https://github.com/Pazella21/ildis/commit/156d96b3e1d0f290c070cb5d0480e969ec9265a7))
+* **frontend:** tambah template Google Analytics GA4 per satker ([8e0640c](https://github.com/Pazella21/ildis/commit/8e0640c25a2b673eb078e4a8d4b95c5bc841c734))
+* implement version tag display in footer for both frontend and backend applications ([2b836d7](https://github.com/Pazella21/ildis/commit/2b836d742629404e4fc5c751054e36c62d15fd7e))
+* template Google Analytics dan perbaikan statistik pengunjung ([#54](https://github.com/Pazella21/ildis/issues/54)) ([864acb8](https://github.com/Pazella21/ildis/commit/864acb8dfc1e868f99c8be64b52afc4bfd3e232b))
+
+### Bug Fixes
+
+*  repository ([a64b91f](https://github.com/Pazella21/ildis/commit/a64b91f2915c523db743066df5d6e2f92da4742f))
+* **assets:** restore missing adminlte and fontawesome dependencies via packagist ([282b766](https://github.com/Pazella21/ildis/commit/282b766c76afa547c06d684e9845b123229906f9))
+* **deps:** upgrade yii2-debug for PHP 8.3 and restore adminlte widgets ([94de8f2](https://github.com/Pazella21/ildis/commit/94de8f2314e09aa7cc70cef52799b8995000b69b))
+* **security:** fix vulnerability report  GHSA-prrm-3g6v-35vv ([655ec75](https://github.com/Pazella21/ildis/commit/655ec75f2d921d9c379c7810ce14b2ac8ce7e5d5))
+* **visitor:** perbaiki agregasi dan hitungan unik pengunjung ([17e2599](https://github.com/Pazella21/ildis/commit/17e259911c210cde82a20417e65571928f5e072e))
+
+### Maintenance
+
+* **release:** 4.17.0 [skip ci] ([4ead6fb](https://github.com/Pazella21/ildis/commit/4ead6fbeb15598701f9f1dcbb8d86aabd36c7660)), closes [#54](https://github.com/Pazella21/ildis/issues/54)
+* **release:** 4.17.1 [skip ci] ([c44051b](https://github.com/Pazella21/ildis/commit/c44051baeedfb8474a1f6513ec43a348c194e770))
+* **release:** 4.17.2 [skip ci] ([07a6570](https://github.com/Pazella21/ildis/commit/07a6570943b8c83e354d5b64b2dd39f8052af94b))
+* **release:** 4.17.3 [skip ci] ([fd60396](https://github.com/Pazella21/ildis/commit/fd60396bb779017aaac4972a9973970ca22eb288))
+* **release:** 4.18.0 [skip ci] ([d3b1e6f](https://github.com/Pazella21/ildis/commit/d3b1e6f4e0b5839f66d1615a5cbdfd80662a0f82))
+
 ## [4.18.0](https://github.com/bphndigitalservice/ildis/compare/v4.17.3...v4.18.0) (2026-07-29)
 
 ### Features
@@ -48,6 +74,76 @@
 
 ### Bug Fixes
 
+* ganti referensi Pazella21 ke bphndigitalservice di install.sh dan quick-install.sh ([4a9437b](https://github.com/Pazella21/ildis/commit/4a9437b795c89a210afbfa5a02c413fcadf606e0))
+
+## [1.2.5](https://github.com/Pazella21/ildis/compare/v1.2.4...v1.2.5) (2026-07-13)
+
+### Bug Fixes
+
+* kembalikan image reference docker compose ke ghcr.io/bphndigitalservice ([a83dc0d](https://github.com/Pazella21/ildis/commit/a83dc0d2cd6b21b281567f983f0740c5ea461685))
+
+## [1.2.4](https://github.com/Pazella21/ildis/compare/v1.2.3...v1.2.4) (2026-07-09)
+
+### Bug Fixes
+
+* kembalikan repo ke BPHN setelah merge ([7fbb9e2](https://github.com/Pazella21/ildis/commit/7fbb9e23525834eda8060969e5eb425d5643a44f))
+
+## [1.2.3](https://github.com/Pazella21/ildis/compare/v1.2.2...v1.2.3) (2026-07-09)
+
+### Bug Fixes
+
+* perbaiki duplikat key di migration ([e35a967](https://github.com/Pazella21/ildis/commit/e35a967036b2cad466f4ce1e3523bc9444ba1d0c))
+
+## [1.2.2](https://github.com/Pazella21/ildis/compare/v1.2.1...v1.2.2) (2026-07-08)
+
+### Bug Fixes
+
+* lowercase GITHUB_REPO untuk ghcr.io ([1494110](https://github.com/Pazella21/ildis/commit/1494110e1fab9b5fbb509e625353e994791c6185))
+
+## [1.2.1](https://github.com/Pazella21/ildis/compare/v1.2.0...v1.2.1) (2026-07-08)
+
+### Bug Fixes
+
+* hapus duplikat menu penyusunan PUU di migration ([099c6d4](https://github.com/Pazella21/ildis/commit/099c6d4d2a29ee7cde41aa5c4c806c7ce9ee04de))
+
+## [1.2.0](https://github.com/Pazella21/ildis/compare/v1.1.3...v1.2.0) (2026-07-02)
+
+### Features
+
+* **a11y:** perbaiki aksesibilitas dan screen reader di frontend ([1eb8761](https://github.com/Pazella21/ildis/commit/1eb8761ab6060cb0eaa01e5caecebf16b5838827))
+* **frontend:** ikon statistik di topbar, hapus link survey di footer ([08c6155](https://github.com/Pazella21/ildis/commit/08c61550d1ee836480d2caba1b756b0d3931aa29))
+* **frontend:** tambah halaman statistik dokumen hukum dan pengunjung ([0370938](https://github.com/Pazella21/ildis/commit/03709384918a86a12d5db3ab5540d031b02b28c5))
+* **frontend:** tambah section dokumen terpopuler di homepage ([eec068d](https://github.com/Pazella21/ildis/commit/eec068d704cb3970008188c43561285300eda30e))
+* **frontend:** tampilkan dan catat jumlah dilihat/unduh di detail dokumen ([471e204](https://github.com/Pazella21/ildis/commit/471e204f2ad47350c10c1ef0288835a81ed04753))
+* **frontend:** widget aksesibilitas, statistik dokumen, ikon survey di topbar ([54b1515](https://github.com/Pazella21/ildis/commit/54b1515c7921bda4619fdb660d46f574fadde224))
+* request KAPUS - counter, terpopuler, a11y, statistik, survey IKM ([#52](https://github.com/Pazella21/ildis/issues/52)) ([b3eb4fb](https://github.com/Pazella21/ildis/commit/b3eb4fb74b5a0e2a5edb4be97a4b4d2dee9c326f))
+* **survey:** implementasi survey kepuasan masyarakat dan laporan hasil ([5acb8c3](https://github.com/Pazella21/ildis/commit/5acb8c3ba1d255b11f6d7561d538b698b7090eed))
+
+### Bug Fixes
+
+* **frontend:** perbaiki orderBy DocumentPopularityService untuk PHP 8.3 ([3fa6236](https://github.com/Pazella21/ildis/commit/3fa62362058be36613cd3e29cf3992bff6f34686))
+* **frontend:** perbaiki sintaks AOS init dan hapus import tidak terpakai ([de34f31](https://github.com/Pazella21/ildis/commit/de34f3193471b04d48044a7ff62a9bd1b402012a))
+
+### Maintenance
+
+* **release:** 4.15.1 [skip ci] ([1d15ef2](https://github.com/Pazella21/ildis/commit/1d15ef2b8c0c7df794ab64f5df49819aa806fe72))
+* **release:** 4.16.0 [skip ci] ([5efb213](https://github.com/Pazella21/ildis/commit/5efb213423967d7fc31d40e058b05ac1bbb505fb)), closes [#52](https://github.com/Pazella21/ildis/issues/52)
+
+## [4.16.0](https://github.com/bphndigitalservice/ildis/compare/v4.15.1...v4.16.0) (2026-06-29)
+
+### Features
+
+* **a11y:** perbaiki aksesibilitas dan screen reader di frontend ([1eb8761](https://github.com/bphndigitalservice/ildis/commit/1eb8761ab6060cb0eaa01e5caecebf16b5838827))
+* **frontend:** ikon statistik di topbar, hapus link survey di footer ([08c6155](https://github.com/bphndigitalservice/ildis/commit/08c61550d1ee836480d2caba1b756b0d3931aa29))
+* **frontend:** tambah halaman statistik dokumen hukum dan pengunjung ([0370938](https://github.com/bphndigitalservice/ildis/commit/03709384918a86a12d5db3ab5540d031b02b28c5))
+* **frontend:** tambah section dokumen terpopuler di homepage ([eec068d](https://github.com/bphndigitalservice/ildis/commit/eec068d704cb3970008188c43561285300eda30e))
+* **frontend:** tampilkan dan catat jumlah dilihat/unduh di detail dokumen ([471e204](https://github.com/bphndigitalservice/ildis/commit/471e204f2ad47350c10c1ef0288835a81ed04753))
+* **frontend:** widget aksesibilitas, statistik dokumen, ikon survey di topbar ([54b1515](https://github.com/bphndigitalservice/ildis/commit/54b1515c7921bda4619fdb660d46f574fadde224))
+* request KAPUS - counter, terpopuler, a11y, statistik, survey IKM ([#52](https://github.com/bphndigitalservice/ildis/issues/52)) ([b3eb4fb](https://github.com/bphndigitalservice/ildis/commit/b3eb4fb74b5a0e2a5edb4be97a4b4d2dee9c326f))
+* **survey:** implementasi survey kepuasan masyarakat dan laporan hasil ([5acb8c3](https://github.com/bphndigitalservice/ildis/commit/5acb8c3ba1d255b11f6d7561d538b698b7090eed))
+
+### Bug Fixes
+
 * **frontend:** perbaiki orderBy DocumentPopularityService untuk PHP 8.3 ([3fa6236](https://github.com/bphndigitalservice/ildis/commit/3fa62362058be36613cd3e29cf3992bff6f34686))
 * **frontend:** perbaiki sintaks AOS init dan hapus import tidak terpakai ([de34f31](https://github.com/bphndigitalservice/ildis/commit/de34f3193471b04d48044a7ff62a9bd1b402012a))
 
@@ -55,130 +151,84 @@
 
 ## [4.15.0](https://github.com/bphndigitalservice/ildis/compare/v4.14.4...v4.15.0) (2026-06-12)
 
-### Features
+### Maintenance
 
-* implement cache-busting for frontend assets ([895848b](https://github.com/bphndigitalservice/ildis/commit/895848b5fc351dc200b174f30344ecf67fda9054))
+* perubahan judul pada halaman ([4773103](https://github.com/Pazella21/ildis/commit/47731036887f95b4a370066722035f9f41c1302e))
+* perubahan judul pada halaman ([d0171b9](https://github.com/Pazella21/ildis/commit/d0171b9e191fe3fe2b3557621efa8e75b94eb17e))
 
-### Bug Fixes
-
-* enforce WAF-safe document slugs with structured peraturan format ([f0a7926](https://github.com/bphndigitalservice/ildis/commit/f0a7926296f0eb25ba0781062661dce2234b1b66))
-* wire WAF-safe slugs through behavior, model, and console ([a4c1012](https://github.com/bphndigitalservice/ildis/commit/a4c1012c49140d834a385bb8cc91d0308cb6b5b8))
-
-### Documentation
-
-* add design spec for WAF-safe document slugs ([abc5335](https://github.com/bphndigitalservice/ildis/commit/abc533540661d2ad47b0edee692518dab3232f84))
-* add implementation plan for WAF-safe document slugs ([0f9ef01](https://github.com/bphndigitalservice/ildis/commit/0f9ef0118bd7d2759ad2468d31d993d2ed3218a7))
-
-## [4.14.4](https://github.com/bphndigitalservice/ildis/compare/v4.14.3...v4.14.4) (2026-06-12)
-
-### Refactoring
-
-* improve selector and event listener functions ([b3cc62b](https://github.com/bphndigitalservice/ildis/commit/b3cc62b3804270f34e4e6a2b393f129d45392d23))
-
-## [4.14.3](https://github.com/bphndigitalservice/ildis/compare/v4.14.2...v4.14.3) (2026-06-12)
-
-### Refactoring
-
-* enhance mobile navigation and footer layout ([a3c5f81](https://github.com/bphndigitalservice/ildis/commit/a3c5f8186de5ec08de4064c21a573d167507f857))
-
-## [4.14.2](https://github.com/bphndigitalservice/ildis/compare/v4.14.1...v4.14.2) (2026-06-12)
-
-### Refactoring
-
-* enhance mobile navigation and layout ([e17b0e8](https://github.com/bphndigitalservice/ildis/commit/e17b0e8895b6164f382e6bd4b64fdd2969ed1d4f))
-
-## [4.14.1](https://github.com/bphndigitalservice/ildis/compare/v4.14.0...v4.14.1) (2026-06-12)
+## [1.1.2](https://github.com/Pazella21/ildis/compare/v1.1.1...v1.1.2) (2026-06-30)
 
 ### Bug Fixes
 
-* improve mobile navigation accessibility and styles ([89b7bd3](https://github.com/bphndigitalservice/ildis/commit/89b7bd3e098840fd54a39d0d8dbb8664bb8e71e5))
+* lowercase image name untuk ghcr.io tag ([fcacf66](https://github.com/Pazella21/ildis/commit/fcacf663e39377b23b104d607a8322dbfc524fd3))
 
-## [4.14.0](https://github.com/bphndigitalservice/ildis/compare/v4.13.0...v4.14.0) (2026-06-12)
-
-### Features
-
-* implement mobile navigation drawer and styles ([b3e8323](https://github.com/bphndigitalservice/ildis/commit/b3e8323f511f1ea06a10c70d96ec25a03ce3c95a))
-
-## [4.13.0](https://github.com/bphndigitalservice/ildis/compare/v4.12.0...v4.13.0) (2026-06-12)
-
-### Features
-
-* enhance document search functionality and layout ([817def8](https://github.com/bphndigitalservice/ildis/commit/817def84670823e329bcde63b6980db4dca37154))
-
-## [4.12.0](https://github.com/bphndigitalservice/ildis/compare/v4.11.0...v4.12.0) (2026-06-12)
-
-### Features
-
-* implement sidebar and shared styles for news search functionality ([fda2dc8](https://github.com/bphndigitalservice/ildis/commit/fda2dc8ad7d5ce4c3eb02638dea27d4d99dc88e8))
-
-## [4.11.0](https://github.com/bphndigitalservice/ildis/compare/v4.10.0...v4.11.0) (2026-06-12)
-
-### Features
-
-* implement lazy loading for images and enhance performance ([3d8a4b9](https://github.com/bphndigitalservice/ildis/commit/3d8a4b9fbfaf2d639883bb4191dd4bef3301947a))
-
-## [4.10.0](https://github.com/bphndigitalservice/ildis/compare/v4.9.2...v4.10.0) (2026-06-12)
-
-### Features
-
-* add document URL rules and enhance frontend search styles ([12c5eba](https://github.com/bphndigitalservice/ildis/commit/12c5eba14efb759ee77018fe3b1b52d3172e0d7d))
-* add FeedExportFilter for feed export CLI filters ([67f6204](https://github.com/bphndigitalservice/ildis/commit/67f62045e257aac2383602ae4bd91db3c86ac282))
-* add interactive feed/export-document command ([4d41469](https://github.com/bphndigitalservice/ildis/commit/4d4146958e57962713069bd818bffb351e8a4eb1))
-* implement DocumentSlugBehavior and enhance document URL handling ([9555125](https://github.com/bphndigitalservice/ildis/commit/95551254528b295065785b24a9e615372b78b711))
-
-### Refactoring
-
-* extract shared feed document pipeline in FeedController ([847d5da](https://github.com/bphndigitalservice/ildis/commit/847d5daf51ac148b12a343ee64f19723b38ea10f))
-
-### Documentation
-
-* add design spec for interactive feed export CLI ([764ac29](https://github.com/bphndigitalservice/ildis/commit/764ac294c3a8f91278a8d9d28d38103ecb6593e1))
-
-## [4.9.2](https://github.com/bphndigitalservice/ildis/compare/v4.9.1...v4.9.2) (2026-06-11)
-
-### Refactoring
-
-* update Apache configuration for jdih.kemenkum.go.id ([47dd8a9](https://github.com/bphndigitalservice/ildis/commit/47dd8a95853c980eaa6781baf8e06c4a9d170575))
-
-## [4.9.1](https://github.com/bphndigitalservice/ildis/compare/v4.9.0...v4.9.1) (2026-06-11)
-
-### Bug Fixes
-
-* implement collapsible search sidebar and pagination for document listings ([dec061e](https://github.com/bphndigitalservice/ildis/commit/dec061e80cc6baf33d44252262bea7969f10168a))
-
-## [4.9.0](https://github.com/bphndigitalservice/ildis/compare/v4.8.0...v4.9.0) (2026-06-11)
-
-### Features
-
-* enhance document detail view and styling ([af5dd46](https://github.com/bphndigitalservice/ildis/commit/af5dd46975d66172753c20f5828a97b98bc62477))
-
-## [4.8.0](https://github.com/bphndigitalservice/ildis/compare/v4.7.1...v4.8.0) (2026-06-11)
-
-### Features
-
-* enhance Apache configuration and frontend styling ([f5752e6](https://github.com/bphndigitalservice/ildis/commit/f5752e68ec12eecf2f4efa99315d2eefa67a9363))
-
-## [4.7.1](https://github.com/bphndigitalservice/ildis/compare/v4.7.0...v4.7.1) (2026-06-11)
-
-### Bug Fixes
-
-* update view-putusan.php to reflect correct model properties ([03ca37d](https://github.com/bphndigitalservice/ildis/commit/03ca37d5d1f0bbf0afd436a9089e0c367e0e0956))
-
-## [4.7.0](https://github.com/bphndigitalservice/ildis/compare/v4.6.7...v4.7.0) (2026-06-11)
-
-### Features
-
-* add Apache virtual host configuration for jdih.kemenkum.go.id ([363d7b1](https://github.com/bphndigitalservice/ildis/commit/363d7b16199bdc5e888affc3ca99b81853123250))
+## [1.1.1](https://github.com/Pazella21/ildis/compare/v1.1.0...v1.1.1) (2026-06-30)
 
 ### Maintenance
 
-* update Apache configuration for jdih.kemenkum.go.id ([7f3bd9d](https://github.com/bphndigitalservice/ildis/commit/7f3bd9df49ab72947232d6766d8a60120a031ae9))
+* revert docker compose mysql  port ([90ec1ba](https://github.com/Pazella21/ildis/commit/90ec1ba67cccdd2863ba4bd1170998959828ee62))
 
-## [4.6.7](https://github.com/bphndigitalservice/ildis/compare/v4.6.6...v4.6.7) (2026-06-11)
+## [1.1.0](https://github.com/Pazella21/ildis/compare/v1.0.0...v1.1.0) (2026-06-17)
+
+### Features
+
+* add Apache virtual host configuration for jdih.kemenkum.go.id ([363d7b1](https://github.com/Pazella21/ildis/commit/363d7b16199bdc5e888affc3ca99b81853123250))
+* add document URL rules and enhance frontend search styles ([12c5eba](https://github.com/Pazella21/ildis/commit/12c5eba14efb759ee77018fe3b1b52d3172e0d7d))
+* add FeedExportFilter for feed export CLI filters ([67f6204](https://github.com/Pazella21/ildis/commit/67f62045e257aac2383602ae4bd91db3c86ac282))
+* add interactive feed/export-document command ([4d41469](https://github.com/Pazella21/ildis/commit/4d4146958e57962713069bd818bffb351e8a4eb1))
+* enhance Apache configuration and frontend styling ([f5752e6](https://github.com/Pazella21/ildis/commit/f5752e68ec12eecf2f4efa99315d2eefa67a9363))
+* enhance document detail view and styling ([af5dd46](https://github.com/Pazella21/ildis/commit/af5dd46975d66172753c20f5828a97b98bc62477))
+* enhance document search functionality and layout ([817def8](https://github.com/Pazella21/ildis/commit/817def84670823e329bcde63b6980db4dca37154))
+* implement cache-busting for frontend assets ([895848b](https://github.com/Pazella21/ildis/commit/895848b5fc351dc200b174f30344ecf67fda9054))
+* implement DocumentSlugBehavior and enhance document URL handling ([9555125](https://github.com/Pazella21/ildis/commit/95551254528b295065785b24a9e615372b78b711))
+* implement lazy loading for images and enhance performance ([3d8a4b9](https://github.com/Pazella21/ildis/commit/3d8a4b9fbfaf2d639883bb4191dd4bef3301947a))
+* implement mobile navigation drawer and styles ([b3e8323](https://github.com/Pazella21/ildis/commit/b3e8323f511f1ea06a10c70d96ec25a03ce3c95a))
+* implement sidebar and shared styles for news search functionality ([fda2dc8](https://github.com/Pazella21/ildis/commit/fda2dc8ad7d5ce4c3eb02638dea27d4d99dc88e8))
 
 ### Bug Fixes
 
-* add suspended_until property to User model and migration ([4594be0](https://github.com/bphndigitalservice/ildis/commit/4594be01f6a8dac15a386d49917a1fa3bcbab6ad))
+* add suspended_until property to User model and migration ([4594be0](https://github.com/Pazella21/ildis/commit/4594be01f6a8dac15a386d49917a1fa3bcbab6ad))
+* enforce WAF-safe document slugs with structured peraturan format ([f0a7926](https://github.com/Pazella21/ildis/commit/f0a7926296f0eb25ba0781062661dce2234b1b66))
+* implement collapsible search sidebar and pagination for document listings ([dec061e](https://github.com/Pazella21/ildis/commit/dec061e80cc6baf33d44252262bea7969f10168a))
+* improve mobile navigation accessibility and styles ([89b7bd3](https://github.com/Pazella21/ildis/commit/89b7bd3e098840fd54a39d0d8dbb8664bb8e71e5))
+* update view-putusan.php to reflect correct model properties ([03ca37d](https://github.com/Pazella21/ildis/commit/03ca37d5d1f0bbf0afd436a9089e0c367e0e0956))
+* wire WAF-safe slugs through behavior, model, and console ([a4c1012](https://github.com/Pazella21/ildis/commit/a4c1012c49140d834a385bb8cc91d0308cb6b5b8))
+
+### Refactoring
+
+* enhance mobile navigation and footer layout ([a3c5f81](https://github.com/Pazella21/ildis/commit/a3c5f8186de5ec08de4064c21a573d167507f857))
+* enhance mobile navigation and layout ([e17b0e8](https://github.com/Pazella21/ildis/commit/e17b0e8895b6164f382e6bd4b64fdd2969ed1d4f))
+* extract shared feed document pipeline in FeedController ([847d5da](https://github.com/Pazella21/ildis/commit/847d5daf51ac148b12a343ee64f19723b38ea10f))
+* improve selector and event listener functions ([b3cc62b](https://github.com/Pazella21/ildis/commit/b3cc62b3804270f34e4e6a2b393f129d45392d23))
+* update Apache configuration for jdih.kemenkum.go.id ([47dd8a9](https://github.com/Pazella21/ildis/commit/47dd8a95853c980eaa6781baf8e06c4a9d170575))
+
+### Documentation
+
+* add design spec for interactive feed export CLI ([764ac29](https://github.com/Pazella21/ildis/commit/764ac294c3a8f91278a8d9d28d38103ecb6593e1))
+* add design spec for WAF-safe document slugs ([abc5335](https://github.com/Pazella21/ildis/commit/abc533540661d2ad47b0edee692518dab3232f84))
+* add implementation plan for WAF-safe document slugs ([0f9ef01](https://github.com/Pazella21/ildis/commit/0f9ef0118bd7d2759ad2468d31d993d2ed3218a7))
+
+### Maintenance
+
+* **release:** 1.0.0 [skip ci] ([e490863](https://github.com/Pazella21/ildis/commit/e4908633e394f6cbec8f54b849591edb93f05a24)), closes [#36](https://github.com/Pazella21/ildis/issues/36) [#40](https://github.com/Pazella21/ildis/issues/40) [#37](https://github.com/Pazella21/ildis/issues/37) [#35](https://github.com/Pazella21/ildis/issues/35) [#31](https://github.com/Pazella21/ildis/issues/31) [#36](https://github.com/Pazella21/ildis/issues/36) [#37](https://github.com/Pazella21/ildis/issues/37) [#35](https://github.com/Pazella21/ildis/issues/35) [#40](https://github.com/Pazella21/ildis/issues/40) [#31](https://github.com/Pazella21/ildis/issues/31)
+* **release:** 4.10.0 [skip ci] ([651be5c](https://github.com/Pazella21/ildis/commit/651be5c3cab2ac1b03e7418eb96f5aae9f87915a))
+* **release:** 4.11.0 [skip ci] ([cba0f1c](https://github.com/Pazella21/ildis/commit/cba0f1cfae2b04fc3bd512ffccee984fd01a3f10))
+* **release:** 4.12.0 [skip ci] ([9f1e061](https://github.com/Pazella21/ildis/commit/9f1e0614fa6fc6acb5a3202a76a12fe09c96fa13))
+* **release:** 4.13.0 [skip ci] ([ba687ae](https://github.com/Pazella21/ildis/commit/ba687aebbc66b3513c197bc530275c2cac8e8828))
+* **release:** 4.14.0 [skip ci] ([d757c70](https://github.com/Pazella21/ildis/commit/d757c707462576db097bcfee483118f6ad6374b2))
+* **release:** 4.14.1 [skip ci] ([619cd7a](https://github.com/Pazella21/ildis/commit/619cd7a14dd597bc169ca37e8d7c532e28b59c51))
+* **release:** 4.14.2 [skip ci] ([ab880cf](https://github.com/Pazella21/ildis/commit/ab880cf740328b76d79f5033ab8cacd3fefa0893))
+* **release:** 4.14.3 [skip ci] ([da6b39e](https://github.com/Pazella21/ildis/commit/da6b39e83f087a8dbf8e24ab462a79c9f8e44df1))
+* **release:** 4.14.4 [skip ci] ([c6e92c7](https://github.com/Pazella21/ildis/commit/c6e92c7dc1d28df023571f8ccad42d3360e5ca79))
+* **release:** 4.15.0 [skip ci] ([89764c0](https://github.com/Pazella21/ildis/commit/89764c0c6462b634b4e6cb364fd6590c950a5536))
+* **release:** 4.6.7 [skip ci] ([89e8325](https://github.com/Pazella21/ildis/commit/89e83253394161f5da2e98dfc4384d67d51759ee))
+* **release:** 4.7.0 [skip ci] ([9ddf52c](https://github.com/Pazella21/ildis/commit/9ddf52c3f8fc17ea4a0b9d8f6bf87466f394aec9))
+* **release:** 4.7.1 [skip ci] ([d2036da](https://github.com/Pazella21/ildis/commit/d2036daafa27de21c02d1ad7b825af0e626e81dd))
+* **release:** 4.8.0 [skip ci] ([a09678d](https://github.com/Pazella21/ildis/commit/a09678d7c18e476bfccda58eda466f96af3dd1e9))
+* **release:** 4.9.0 [skip ci] ([cfc67e6](https://github.com/Pazella21/ildis/commit/cfc67e617aeade5da60d7bf203fcb5a8a8a8e198))
+* **release:** 4.9.1 [skip ci] ([4fe10b0](https://github.com/Pazella21/ildis/commit/4fe10b084d6715bffa38bb8240b289d50bfae3d0))
+* **release:** 4.9.2 [skip ci] ([dca0abc](https://github.com/Pazella21/ildis/commit/dca0abcadef554a4963c9ebb5db4f988b5f33d61))
+* update Apache configuration for jdih.kemenkum.go.id ([7f3bd9d](https://github.com/Pazella21/ildis/commit/7f3bd9df49ab72947232d6766d8a60120a031ae9))
 
 ## [4.6.6](https://github.com/bphndigitalservice/ildis/compare/v4.6.5...v4.6.6) (2026-06-02)
 

@@ -89,7 +89,7 @@ class m260527_000000_add_document_group_label_to_document_type extends Migration
             $this->insert('{{%auth_item}}', [
                 'name' => $permission,
                 'type' => 2,
-                'description' => 'View Dokumen Pembentukan PUU menu group',
+                'description' => 'View Dokumen Penyusunan PUU menu group',
                 'rule_name' => null,
                 'data' => null,
                 'created_at' => $time,

@@ -33,7 +33,7 @@ use common\models\DocumentType;
 <!-- Custom Tabs -->
 <div class="box box-primary box-solid">
     <div class="box-header with-border">
-        <b>Dokumen Pembentukan PUU</b>
+        <b>Dokumen Penyusunan PUU</b>
     </div>
     <div class="box-body">
         <?= $form->field($model, 'jenis_peraturan')->dropDownList(

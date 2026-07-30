@@ -12,7 +12,7 @@ use common\models\DocumentType;
 /* @var $searchModel backend\models\DokumenPembentukanPuuSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Dokumen Pembentukan PUU';
+$this->title = 'Dokumen Penyusunan PUU';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         'panel' => [
             'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-book"></i> Data Dokumen Pembentukan PUU</h3>',
+            'heading' => '<h3 class="panel-title"><i class="glyphicon glyphicon-book"></i> Data Dokumen Penyusunan PUU</h3>',
            // 'before' =>  \nterms\pagesize\PageSize::widget(['options' => ['class' => 'btn btn-default btn dropdown-toggle btn']]),
         ],
 
