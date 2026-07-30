@@ -1,3 +1,29 @@
+## [1.3.0](https://github.com/Pazella21/ildis/compare/v1.2.6...v1.3.0) (2026-07-30)
+
+### Features
+
+* **backend:** display application version from VERSION file in footer ([db5c011](https://github.com/Pazella21/ildis/commit/db5c0117c4a9e4e9f3da6ce87a73cf728fb4773f))
+* **frontend:** display application version from VERSION file in footer ([156d96b](https://github.com/Pazella21/ildis/commit/156d96b3e1d0f290c070cb5d0480e969ec9265a7))
+* **frontend:** tambah template Google Analytics GA4 per satker ([8e0640c](https://github.com/Pazella21/ildis/commit/8e0640c25a2b673eb078e4a8d4b95c5bc841c734))
+* implement version tag display in footer for both frontend and backend applications ([2b836d7](https://github.com/Pazella21/ildis/commit/2b836d742629404e4fc5c751054e36c62d15fd7e))
+* template Google Analytics dan perbaikan statistik pengunjung ([#54](https://github.com/Pazella21/ildis/issues/54)) ([864acb8](https://github.com/Pazella21/ildis/commit/864acb8dfc1e868f99c8be64b52afc4bfd3e232b))
+
+### Bug Fixes
+
+*  repository ([a64b91f](https://github.com/Pazella21/ildis/commit/a64b91f2915c523db743066df5d6e2f92da4742f))
+* **assets:** restore missing adminlte and fontawesome dependencies via packagist ([282b766](https://github.com/Pazella21/ildis/commit/282b766c76afa547c06d684e9845b123229906f9))
+* **deps:** upgrade yii2-debug for PHP 8.3 and restore adminlte widgets ([94de8f2](https://github.com/Pazella21/ildis/commit/94de8f2314e09aa7cc70cef52799b8995000b69b))
+* **security:** fix vulnerability report  GHSA-prrm-3g6v-35vv ([655ec75](https://github.com/Pazella21/ildis/commit/655ec75f2d921d9c379c7810ce14b2ac8ce7e5d5))
+* **visitor:** perbaiki agregasi dan hitungan unik pengunjung ([17e2599](https://github.com/Pazella21/ildis/commit/17e259911c210cde82a20417e65571928f5e072e))
+
+### Maintenance
+
+* **release:** 4.17.0 [skip ci] ([4ead6fb](https://github.com/Pazella21/ildis/commit/4ead6fbeb15598701f9f1dcbb8d86aabd36c7660)), closes [#54](https://github.com/Pazella21/ildis/issues/54)
+* **release:** 4.17.1 [skip ci] ([c44051b](https://github.com/Pazella21/ildis/commit/c44051baeedfb8474a1f6513ec43a348c194e770))
+* **release:** 4.17.2 [skip ci] ([07a6570](https://github.com/Pazella21/ildis/commit/07a6570943b8c83e354d5b64b2dd39f8052af94b))
+* **release:** 4.17.3 [skip ci] ([fd60396](https://github.com/Pazella21/ildis/commit/fd60396bb779017aaac4972a9973970ca22eb288))
+* **release:** 4.18.0 [skip ci] ([d3b1e6f](https://github.com/Pazella21/ildis/commit/d3b1e6f4e0b5839f66d1615a5cbdfd80662a0f82))
+
 ## [4.18.0](https://github.com/bphndigitalservice/ildis/compare/v4.17.3...v4.18.0) (2026-07-29)
 
 ### Features
