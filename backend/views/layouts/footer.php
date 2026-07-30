@@ -3,9 +3,8 @@
 use yii\helpers\Html;
 use mdm\admin\models\User;
 
-$packagePath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'package.json';
-$package = file_exists($packagePath) ? json_decode(file_get_contents($packagePath), true) : [];
-$appVersion = $package['version'] ?? 'dev';
+$versionPath = dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'VERSION';
+$appVersion = file_exists($versionPath) ? trim(file_get_contents($versionPath)) : 'dev';
 
 $user = !Yii::$app->user->isGuest
     ? User::find()->where(['id' => Yii::$app->user->id])->one()

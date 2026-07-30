@@ -37,4 +37,30 @@ class VisitorCounterTest extends Unit
 
         $this->assertFalse($counter->isUniqueVisit($fingerprint, $documentId));
     }
+
+    public function testIsFirstVisitInRangeAcrossDays()
+    {
+        $counter = new VisitorCounter();
+        $fingerprint = $counter->generateFingerprint('10.0.0.2', 'TestAgent/2.0');
+        $documentId = null;
+        $weekStart = date('Y-m-d', strtotime('monday this week'));
+
+        $this->assertTrue($counter->isFirstVisitInRange($fingerprint, $documentId, $weekStart));
+
+        $log = new VisitorLog();
+        $log->visitor_fingerprint = $fingerprint;
+        $log->visitor_cookie_id = 'test-cookie-week';
+        $log->document_id = $documentId;
+        $log->page_url = 'http://localhost/';
+        $log->visit_date = $weekStart;
+        $log->visit_time = $weekStart . ' 10:00:00';
+        $log->is_unique = 1;
+        $log->save();
+
+        $this->assertFalse($counter->isFirstVisitInRange($fingerprint, $documentId, $weekStart));
+        // Still unique for "today" if weekStart is not today
+        if ($weekStart !== date('Y-m-d')) {
+            $this->assertTrue($counter->isUniqueVisit($fingerprint, $documentId));
+        }
+    }
 }

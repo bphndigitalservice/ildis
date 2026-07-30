@@ -40,11 +40,14 @@
     ["@semantic-release/changelog", {
       "changelogFile": "CHANGELOG.md"
     }],
+    ["@semantic-release/exec", {
+      "prepareCmd": "echo ${nextRelease.version} > VERSION"
+    }],
     ["@semantic-release/github", {
       "addReleases": "bottom"
     }],
     ["@semantic-release/git", {
-      "assets": ["CHANGELOG.md", "package.json"],
+      "assets": ["CHANGELOG.md", "package.json", "VERSION"],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }]
   ]

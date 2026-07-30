@@ -39,8 +39,8 @@ return [
 
         'reCaptcha' => [
             'class' => 'himiklab\yii2\recaptcha\ReCaptchaConfig',
-            'siteKeyV3' => Yii::$app->params['recaptcha.siteKey'],
-            'secretV3' => Yii::$app->params['recaptcha.secretKey'],
+            'siteKeyV3' => $params['recaptcha.siteKey'] ?? '',
+            'secretV3' => $params['recaptcha.secretKey'] ?? '',
         ],
         //  'formatter' => [
         //   'class' => 'yii\i18n\Formatter',

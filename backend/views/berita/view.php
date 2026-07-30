@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use common\components\HtmlSanitizer;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Berita */
@@ -43,6 +44,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'isi',
                         'format' => 'raw',
+                        'value' => function ($model) {
+                            return HtmlSanitizer::purify($model->isi);
+                        },
                     ],
                     [
                         'label' => 'Photo Berita',

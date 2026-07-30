@@ -1,4 +1,50 @@
-## [1.2.6](https://github.com/Pazella21/ildis/compare/v1.2.5...v1.2.6) (2026-07-15)
+## [4.18.0](https://github.com/bphndigitalservice/ildis/compare/v4.17.3...v4.18.0) (2026-07-29)
+
+### Features
+
+* **backend:** display application version from VERSION file in footer ([db5c011](https://github.com/bphndigitalservice/ildis/commit/db5c0117c4a9e4e9f3da6ce87a73cf728fb4773f))
+* **frontend:** display application version from VERSION file in footer ([156d96b](https://github.com/bphndigitalservice/ildis/commit/156d96b3e1d0f290c070cb5d0480e969ec9265a7))
+* implement version tag display in footer for both frontend and backend applications ([2b836d7](https://github.com/bphndigitalservice/ildis/commit/2b836d742629404e4fc5c751054e36c62d15fd7e))
+
+## [4.17.3](https://github.com/bphndigitalservice/ildis/compare/v4.17.2...v4.17.3) (2026-07-27)
+
+### Bug Fixes
+
+*  repository ([a64b91f](https://github.com/bphndigitalservice/ildis/commit/a64b91f2915c523db743066df5d6e2f92da4742f))
+* **assets:** restore missing adminlte and fontawesome dependencies via packagist ([282b766](https://github.com/bphndigitalservice/ildis/commit/282b766c76afa547c06d684e9845b123229906f9))
+* **deps:** upgrade yii2-debug for PHP 8.3 and restore adminlte widgets ([94de8f2](https://github.com/bphndigitalservice/ildis/commit/94de8f2314e09aa7cc70cef52799b8995000b69b))
+
+## [4.17.2](https://github.com/bphndigitalservice/ildis/compare/v4.17.1...v4.17.2) (2026-07-27)
+
+## [4.17.1](https://github.com/bphndigitalservice/ildis/compare/v4.17.0...v4.17.1) (2026-07-19)
+
+### Bug Fixes
+
+* **security:** fix vulnerability report  GHSA-prrm-3g6v-35vv ([655ec75](https://github.com/bphndigitalservice/ildis/commit/655ec75f2d921d9c379c7810ce14b2ac8ce7e5d5))
+
+## [4.17.0](https://github.com/bphndigitalservice/ildis/compare/v4.16.0...v4.17.0) (2026-07-16)
+
+### Features
+
+* **frontend:** tambah template Google Analytics GA4 per satker ([8e0640c](https://github.com/bphndigitalservice/ildis/commit/8e0640c25a2b673eb078e4a8d4b95c5bc841c734))
+* template Google Analytics dan perbaikan statistik pengunjung ([#54](https://github.com/bphndigitalservice/ildis/issues/54)) ([864acb8](https://github.com/bphndigitalservice/ildis/commit/864acb8dfc1e868f99c8be64b52afc4bfd3e232b))
+
+### Bug Fixes
+
+* **visitor:** perbaiki agregasi dan hitungan unik pengunjung ([17e2599](https://github.com/bphndigitalservice/ildis/commit/17e259911c210cde82a20417e65571928f5e072e))
+
+## [4.16.0](https://github.com/bphndigitalservice/ildis/compare/v4.15.1...v4.16.0) (2026-06-29)
+
+### Features
+
+* **a11y:** perbaiki aksesibilitas dan screen reader di frontend ([1eb8761](https://github.com/bphndigitalservice/ildis/commit/1eb8761ab6060cb0eaa01e5caecebf16b5838827))
+* **frontend:** ikon statistik di topbar, hapus link survey di footer ([08c6155](https://github.com/bphndigitalservice/ildis/commit/08c61550d1ee836480d2caba1b756b0d3931aa29))
+* **frontend:** tambah halaman statistik dokumen hukum dan pengunjung ([0370938](https://github.com/bphndigitalservice/ildis/commit/03709384918a86a12d5db3ab5540d031b02b28c5))
+* **frontend:** tambah section dokumen terpopuler di homepage ([eec068d](https://github.com/bphndigitalservice/ildis/commit/eec068d704cb3970008188c43561285300eda30e))
+* **frontend:** tampilkan dan catat jumlah dilihat/unduh di detail dokumen ([471e204](https://github.com/bphndigitalservice/ildis/commit/471e204f2ad47350c10c1ef0288835a81ed04753))
+* **frontend:** widget aksesibilitas, statistik dokumen, ikon survey di topbar ([54b1515](https://github.com/bphndigitalservice/ildis/commit/54b1515c7921bda4619fdb660d46f574fadde224))
+* request KAPUS - counter, terpopuler, a11y, statistik, survey IKM ([#52](https://github.com/bphndigitalservice/ildis/issues/52)) ([b3eb4fb](https://github.com/bphndigitalservice/ildis/commit/b3eb4fb74b5a0e2a5edb4be97a4b4d2dee9c326f))
+* **survey:** implementasi survey kepuasan masyarakat dan laporan hasil ([5acb8c3](https://github.com/bphndigitalservice/ildis/commit/5acb8c3ba1d255b11f6d7561d538b698b7090eed))
 
 ### Bug Fixes
 

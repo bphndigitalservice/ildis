@@ -7,6 +7,7 @@ use yii\db\ActiveRecord;
 use yii\db\Expression;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\BlameableBehavior;
+use common\components\HtmlSanitizer;
 
 /**
  * This is the model class for table "berita".
@@ -82,6 +83,25 @@ class Berita extends \yii\db\ActiveRecord
                 'updatedByAttribute' => 'updated_by',
             ],
         ];
+    }
+
+    /**
+     * Strip script-capable HTML from isi before persist (stored XSS defense).
+     *
+     * @param bool $insert
+     * @return bool
+     */
+    public function beforeSave($insert)
+    {
+        if (!parent::beforeSave($insert)) {
+            return false;
+        }
+
+        if ($this->isi !== null) {
+            $this->isi = HtmlSanitizer::purify($this->isi);
+        }
+
+        return true;
     }
 
     public function getTanggal($tanggal)  // fungsi atau method untuk mengubah hari, tanggal ke format indonesia

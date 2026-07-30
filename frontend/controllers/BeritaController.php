@@ -7,34 +7,46 @@ use frontend\models\Berita;
 use frontend\models\search\BeritaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use yii\web\UploadedFile;
+use yii\web\ForbiddenHttpException;
 use frontend\models\Dokumen;
 
+/**
+ * Public berita listing and detail.
+ *
+ * Create / update / delete are intentionally not exposed on the frontend
+ * (GHSA-prrm-3g6v-35vv). Content management lives in the backend app only.
+ */
 class BeritaController extends Controller
 {
-    public function behaviors()
+    /**
+     * Reject legacy write routes that previously allowed unauthenticated / member CRUD.
+     *
+     * @return mixed
+     * @throws ForbiddenHttpException
+     */
+    public function actionCreate()
     {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create', 'update', 'delete'],
-                'rules' => [
-                    [
-                        'actions' => ['create', 'update', 'delete'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
+        throw new ForbiddenHttpException('Pengelolaan berita hanya tersedia melalui panel administrasi.');
+    }
+
+    /**
+     * @param int|string $id
+     * @return mixed
+     * @throws ForbiddenHttpException
+     */
+    public function actionUpdate($id)
+    {
+        throw new ForbiddenHttpException('Pengelolaan berita hanya tersedia melalui panel administrasi.');
+    }
+
+    /**
+     * @param int|string $id
+     * @return mixed
+     * @throws ForbiddenHttpException
+     */
+    public function actionDelete($id)
+    {
+        throw new ForbiddenHttpException('Pengelolaan berita hanya tersedia melalui panel administrasi.');
     }
 
     public function actionIndex()
@@ -61,49 +73,6 @@ class BeritaController extends Controller
             'dataProvider' => $dataProvider,
             'model2' => $searchModel
         ]);
-    }
-
-    public function actionCreate()
-    {
-        $model = new Berita();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($model->save()) {
-                Yii::$app->session->setFlash('success', 'Data Berita berhasil ditambahkan');
-                return $this->redirect(['view', 'id' => $model->id]);
-            } else {
-                Yii::$app->session->setFlash('error', 'Data Berita Gagal ditambahkan, periksa kembali ');
-                return $this->render('create', ['model' => $model]);
-            }
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', 'Data Berita berhasil diubah');
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    public function actionDelete($id)
-    {
-        try {
-            $this->findModel($id)->delete();
-            Yii::$app->session->setFlash('danger', 'Data Berita berhasil dihapus');
-            return $this->redirect(['index']);
-        } catch (\yii\db\IntegrityException  $e) {
-            Yii::$app->session->setFlash('error', "Data Berita Tidak Dapat Dihapus Karena Dipakai Modul Lain");
-            return $this->redirect(['index']);
-        }
     }
 
     protected function findModel($id)
