@@ -106,12 +106,11 @@ class DokumenTerkait extends \yii\db\ActiveRecord
 
     public function getUserInput($id)
     {
-        $user = User::findOne($id);
-        if (!empty($dokumen)) {
-            return $user->username;
-        } else {
-            return '';
+        if (empty($id)) {
+            return '-';
         }
+        $user = User::findOne($id);
+        return $user ? $user->username : '-';
     }
 
     public function getNamaDokumen($id)
