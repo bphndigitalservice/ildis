@@ -1,3 +1,10 @@
+## [4.18.1](https://github.com/bphndigitalservice/ildis/compare/v4.18.0...v4.18.1) (2026-09-07)
+
+### Bug Fixes
+
+* add null-safety checks for user properties in backend models (PHP 8 compatibility) ([dd3089b](https://github.com/bphndigitalservice/ildis/commit/dd3089b5242ff42d9839ef7fe1265ea3e4ff5786))
+* add null-safety checks for user properties in backend models (PHP 8 compatibility) ([#59](https://github.com/bphndigitalservice/ildis/issues/59)) ([e1faf70](https://github.com/bphndigitalservice/ildis/commit/e1faf70cba5a4fdf7e510f6771779a37cb4df05d))
+
 ## [4.18.0](https://github.com/bphndigitalservice/ildis/compare/v4.17.3...v4.18.0) (2026-07-29)
 
 ### Features
