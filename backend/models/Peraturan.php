@@ -244,25 +244,24 @@ class Peraturan extends \yii\db\ActiveRecord
 
     public function getUserInput($id)
     {
+        if (empty($id)) {
+            return '-';
+        }
         $user = User::findOne($id);
-        return $user->username;
+        return $user ? $user->username : '-';
     }
 
 
     public function getJudul($id)
     {
+        if (empty($id)) {
+            return '-';
+        }
         $dokumen = DokumenJdih::findOne($id);
+        if (!$dokumen) {
+            return '-';
+        }
         if ($dokumen->is_publish == 0) {
-            $catatan = CatatanVerifikasi::find()->where(['dokumen_id' => $id])->orderBy(['id' => SORT_DESC])->one();
-            if (!empty($catatan)) {
-
-                if ($catatan->created_by == \Yii::$app->user->identity->id) {
-                    return Html::a(strtoupper($dokumen->judul), ['view', 'id' => $dokumen->id]) . '<br>' .
-                        "<span class='label label-danger'>" . $catatan->catatan . "</span>";
-                } else {
-                    return Html::a(strtoupper($dokumen->judul), ['view', 'id' => $dokumen->id]) . '<br>' . "<span class='label label-success'>" . $catatan->catatan . "</span>";
-                }
-            }
 
             return Html::a(strtoupper($dokumen->judul), ['view', 'id' => $dokumen->id]);
         } else {

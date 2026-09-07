@@ -239,9 +239,11 @@ class Putusan extends \yii\db\ActiveRecord
      
     public function getUserInput($id) 
     {
+        if (empty($id)) {
+            return '-';
+        }
         $user = User::findOne($id);
-        return $user->username;
-
+        return $user ? $user->username : '-';
     } 
    
 }
