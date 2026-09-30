@@ -18,7 +18,7 @@ $this->title = 'Dokumen Undang-Undang';
                 <div class="results-container bg-white rounded-4 p-4 p-md-5" style="box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
                     <div class="results-summary mb-4 pb-3 border-bottom d-flex justify-content-between align-items-center">
                         <div class="small text-muted">
-                            <?= $dataProvider->getTotalCount() > 0 ? "Menampilkan " . ($dataProvider->pagination->offset + 1) . " - " . min($dataProvider->pagination->offset + $dataProvider->pagination->limit, $dataProvider->getTotalCount()) . " dari " . number_format($dataProvider->getTotalCount()) . " dokumen" : "Tidak ada dokumen ditemukan" ?>
+                            <?= $this->render('_results-summary', ['dataProvider' => $dataProvider]) ?>
                         </div>
                     </div>
 
