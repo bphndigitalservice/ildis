@@ -1,3 +1,9 @@
+## [4.18.2](https://github.com/bphndigitalservice/ildis/compare/v4.18.1...v4.18.2) (2026-09-30)
+
+### Bug Fixes
+
+* **dokumen:** sync pagination totalCount before reading offset ([f879b73](https://github.com/bphndigitalservice/ildis/commit/f879b73b344d298688aa579fb44a48c22ee349ce))
+
 ## [4.18.1](https://github.com/bphndigitalservice/ildis/compare/v4.18.0...v4.18.1) (2026-09-07)
 
 ### Bug Fixes
