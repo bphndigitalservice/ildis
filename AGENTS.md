@@ -29,8 +29,8 @@ vendor/bin/codecept run -c common       # Common tests
 
 Run a **single test**:
 ```bash
-vendor/bin/codecept run unit unit/models/LoginFormTest       # Single test file
-vendor/bin/codecept run functional LoginCest                 # Single cest file
+vendor/bin/codecept run -c common unit models/LoginFormTest    # Single test file
+vendor/bin/codecept run -c frontend functional LoginCest      # Single Cest file
 vendor/bin/codecept run --filter testMethodName               # Filter by method name
 ```
 
@@ -43,7 +43,9 @@ vendor/bin/codecept run acceptance # Acceptance tests (if configured)
 
 ### Development Server
 
-Start PHP built-in server:
+Initialize the Advanced Template first if the root `yii` script is absent. Run
+`php init` and select the Development environment; then start the PHP built-in
+server:
 ```bash
 php yii serve                         # Default port 8080
 php yii serve --port=9000            # Custom port
@@ -53,8 +55,13 @@ php yii serve --port=9000            # Custom port
 
 Install dependencies:
 ```bash
-composer update --ignore-platform-reqs
+composer install
 ```
+
+Use `composer update` only when intentionally changing dependency versions and
+review the resulting `composer.lock` diff. Do not ignore platform requirements
+as a routine workaround; match the PHP version and extensions required by the
+project instead.
 
 ### Database
 
@@ -70,7 +77,7 @@ php yii migrate/down                 # Rollback last migration
 
 ### General Conventions
 
-- **PHP Version**: PHP 7.4+ (PHP 8.1 recommended)
+- **PHP Version**: PHP 8.3+ (matches `composer.json` and the production Docker image)
 - **Indentation**: 4 spaces (no tabs)
 - **Line Endings**: Unix-style (LF)
 - **Max Line Length**: 120 characters (soft limit)
@@ -267,7 +274,8 @@ public function validatePassword($attribute, $params)
 
 - Test files: `*Test.php` for unit tests, `*Cest.php` for functional tests
 - Test class names: Same as file name
-- Use `$I->assert*` methods for assertions
+- In unit tests, use PHPUnit assertions (`$this->assert*`) or Codeception's `expect()`.
+  In Cest tests, use the actor assertions (`$I->assert*`).
 - Use fixtures for test data
 
 ```php
