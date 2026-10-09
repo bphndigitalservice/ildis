@@ -20,4 +20,4 @@ if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
     echo "[cron-entrypoint] WARNING: Database not ready. Starting cron anyway - jobs may fail until DB is available."
 fi
 
-exec crond -f -l 2
+exec crond -f -s
