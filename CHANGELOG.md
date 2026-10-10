@@ -1,3 +1,10 @@
+## [4.18.3](https://github.com/bphndigitalservice/ildis/compare/v4.18.2...v4.18.3) (2026-10-10)
+
+### Documentation
+
+* align agent and domain context with code ([228887c](https://github.com/bphndigitalservice/ildis/commit/228887c6459306346967d30a3966f01ebba8cb83))
+* align agent and domain context with code ([#62](https://github.com/bphndigitalservice/ildis/issues/62)) ([a57af49](https://github.com/bphndigitalservice/ildis/commit/a57af49bc92403e88a0047facb54e9c212490bf6))
+
 ## [4.18.2](https://github.com/bphndigitalservice/ildis/compare/v4.18.1...v4.18.2) (2026-09-30)
 
 ### Bug Fixes
