@@ -14,7 +14,9 @@ COPY . .
 # ============================================
 # Stage 2: Production runtime
 # ============================================
-FROM php:8.3-fpm-alpine AS production
+# Pin PHP 8.3.36+ to mitigate PHP2Shell (CVE-2026-109618, CVE-2026-109619).
+# Digest locks the multi-arch index so rebuilds cannot silently regress.
+FROM php:8.3.36-fpm-alpine@sha256:81cb692948e6de4275f7e107c50a34e963a440660f2c5b8502d11071f7d30338 AS production
 
 WORKDIR /var/www
 

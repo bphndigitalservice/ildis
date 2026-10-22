@@ -14,7 +14,9 @@ COPY . .
 # ============================================
 # Stage 2: Build PHP extensions
 # ============================================
-FROM php:8.3-cli-alpine AS php-ext-builder
+# Pin PHP 8.3.36+ to mitigate PHP2Shell (CVE-2026-109618, CVE-2026-109619).
+# Digest locks the multi-arch index so rebuilds cannot silently regress.
+FROM php:8.3.36-cli-alpine@sha256:9e3f659660bf060ac3baaa56bfdfb07ef92d12cda24e702cc762ef7fb036cfb6 AS php-ext-builder
 
 RUN apk add --no-cache \
     icu-dev \
@@ -33,7 +35,7 @@ RUN docker-php-ext-install -j$(nproc) \
 # ============================================
 # Stage 3: Cron runtime
 # ============================================
-FROM php:8.3-cli-alpine AS production
+FROM php:8.3.36-cli-alpine@sha256:9e3f659660bf060ac3baaa56bfdfb07ef92d12cda24e702cc762ef7fb036cfb6 AS production
 
 WORKDIR /var/www
 
