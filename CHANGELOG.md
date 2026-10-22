@@ -1,3 +1,9 @@
+## [4.18.4](https://github.com/bphndigitalservice/ildis/compare/v4.18.3...v4.18.4) (2026-10-22)
+
+### Bug Fixes
+
+* **docker:** pin PHP 8.3.36 to mitigate PHP2Shell CVEs ([#65](https://github.com/bphndigitalservice/ildis/issues/65)) ([ff99e96](https://github.com/bphndigitalservice/ildis/commit/ff99e9694c2efe9bf87ab4f0c0293f31c1154b95))
+
 ## [4.18.3](https://github.com/bphndigitalservice/ildis/compare/v4.18.2...v4.18.3) (2026-10-10)
 
 ### Documentation
