@@ -1,3 +1,5 @@
+## [4.18.5](https://github.com/bphndigitalservice/ildis/compare/v4.18.4...v4.18.5) (2026-11-08)
+
 ## [4.18.4](https://github.com/bphndigitalservice/ildis/compare/v4.18.3...v4.18.4) (2026-10-22)
 
 ### Bug Fixes
