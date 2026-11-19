@@ -1541,6 +1541,7 @@ do_install() {
     generate_env
     generate_compose
     generate_nginx_config
+    generate_php_config
 
     if [ "${REVERSE_PROXY}" = false ]; then
         generate_traefik_config
