@@ -85,6 +85,9 @@ RUN mkdir -p /var/www/runtime \
 # Configure Nginx (use a file to avoid shell-escaping issues)
 COPY docker/nginx/default.conf /etc/nginx/http.d/default.conf
 
+# Configure PHP (use a file to avoid shell-escaping issues)
+COPY docker/php/custom.ini /usr/local/etc/php/conf.d/custom.ini
+
 # Create s6-overlay v3 service directories
 # Each service needs: a directory, a type file, and a run script
 # Then they must be listed in a bundle so s6-rc activates them on boot
