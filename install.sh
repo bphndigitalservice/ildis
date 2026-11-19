@@ -1233,6 +1233,8 @@ server {
 
     absolute_redirect off;
 
+    client_max_body_size 12M;
+
     root /var/www;
     index index.php;
 
@@ -1332,8 +1334,8 @@ max_input_vars = 3000
 
 ; --- File Uploads ---
 file_uploads = On
-upload_max_filesize = 64M
-post_max_size = 68M
+upload_max_filesize = 10M ; file size limit for individual uploads
+post_max_size = 12M ; total size limit for all uploads in a single request, must be greater than upload_max_filesize
 max_file_uploads = 10
 
 ; --- Session Security ---
