@@ -662,6 +662,7 @@ generate_compose() {
 
     extra_volumes="
       - ./nginx/default.conf:/etc/nginx/http.d/default.conf:ro
+      - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro
       - ./logs/nginx:/var/log/nginx
       - app_logs:/var/www/runtime/logs"
 
@@ -1667,6 +1668,7 @@ do_install() {
     echo "  Konfigurasi:   ${INSTALL_DIR}/${ENV_FILE}"
     echo "  Compose:       ${INSTALL_DIR}/${COMPOSE_FILE}"
     echo "  Nginx:         ${INSTALL_DIR}/nginx/default.conf"
+    echo "  PHP:           ${INSTALL_DIR}/php/custom.ini"
 
     if [ "${REVERSE_PROXY}" = false ]; then
         echo "  Traefik:       ${INSTALL_DIR}/traefik/"
@@ -1858,6 +1860,9 @@ do_update() {
 
     if [ -f "${INSTALL_DIR}/nginx/default.conf" ]; then
         generate_nginx_config
+    fi
+    if grep -q "php/custom.ini" "${compose_file}" 2>/dev/null; then
+        generate_php_config
     fi
     if [ -d "${INSTALL_DIR}/traefik" ]; then
         generate_traefik_config
