@@ -1669,6 +1669,7 @@ do_install() {
     echo "  Compose:       ${INSTALL_DIR}/${COMPOSE_FILE}"
     echo "  Nginx:         ${INSTALL_DIR}/nginx/default.conf"
     echo "  PHP:           ${INSTALL_DIR}/php/custom.ini"
+    echo "                 (setelah mengubah, jalankan: ${COMPOSE_CMD} -f ${INSTALL_DIR}/${COMPOSE_FILE} restart app)"
 
     if [ "${REVERSE_PROXY}" = false ]; then
         echo "  Traefik:       ${INSTALL_DIR}/traefik/"
