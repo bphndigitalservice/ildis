@@ -662,6 +662,7 @@ generate_compose() {
 
     extra_volumes="
       - ./nginx/default.conf:/etc/nginx/http.d/default.conf:ro
+      - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro
       - ./logs/nginx:/var/log/nginx
       - app_logs:/var/www/runtime/logs"
 
@@ -1232,6 +1233,8 @@ server {
 
     absolute_redirect off;
 
+    client_max_body_size 12M;
+
     root /var/www;
     index index.php;
 
@@ -1280,6 +1283,91 @@ NGINXEOF
 
     chmod 644 "${INSTALL_DIR}/nginx/default.conf"
     success "nginx/default.conf dibuat"
+}
+
+# ── Generate PHP config ──────────────────────────────────────────────────────
+generate_php_config() {
+    local php_ini="${INSTALL_DIR}/php/custom.ini"
+
+    # Docker membuat direktori kosong jika sumber bind mount belum ada saat container dibuat
+    if [ -d "${php_ini}" ]; then
+        rmdir "${php_ini}" 2>/dev/null || fail "${php_ini} adalah direktori dan tidak bisa dihapus. Hapus manual lalu ulangi."
+    fi
+
+    if [ -f "${php_ini}" ]; then
+        info "php/custom.ini sudah ada, dipertahankan"
+        return 0
+    fi
+
+    info "Membuat php/custom.ini..."
+
+    mkdir -p "${INSTALL_DIR}/php"
+
+    cat > "${php_ini}" <<'PHPINIEOF'
+; ==============================================================================
+; Custom Overrides for PHP-FPM in Docker
+; You can adjust the settings based on your specific needs
+; ==============================================================================
+
+[PHP]
+; --- Security Hardening ---
+expose_php = Off
+allow_url_fopen = On
+allow_url_include = Off
+cgi.fix_pathinfo = 0
+
+; --- Error Handling & Docker Logging ---
+; For production, we keep errors off to prevent sensitive information exposure
+display_errors = Off
+display_startup_errors = Off
+log_errors = On
+error_log = /proc/self/fd/2
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+html_errors = Off
+
+; --- Resource & Execution Limits ---
+; Adjust memory_limit and upload sizes based on your specific workload
+memory_limit = 256M
+max_execution_time = 60
+max_input_time = 60
+max_input_vars = 3000
+
+; --- File Uploads ---
+file_uploads = On
+upload_max_filesize = 10M ; file size limit for individual uploads
+post_max_size = 12M ; total size limit for all uploads in a single request, must be greater than upload_max_filesize
+max_file_uploads = 10
+
+; --- Session Security ---
+; Other session settings needs further testing
+; For now, we disable upload progress to avoid potential security risks, especially for PHP2Shell
+session.upload_progress.enabled = Off
+;session.cookie_httponly = 1
+;session.cookie_secure = 1
+;session.cookie_samesite = "Strict"
+;session.use_strict_mode = 1
+
+; --- Date & Timezone ---
+date.timezone = Asia/Jakarta
+
+[opcache]
+; --- OPcache Production Tuning ---
+opcache.enable = 1
+opcache.enable_cli = 0
+opcache.memory_consumption = 128
+opcache.interned_strings_buffer = 16
+opcache.max_accelerated_files = 20000
+
+; Immutable container optimization:
+; Set to 0 if code is baked into the image (best performance).
+; Set to 1 if you bind-mount live code or update files without restarting the container.
+opcache.validate_timestamps = 0
+opcache.revalidate_freq = 0
+opcache.save_comments = 0
+PHPINIEOF
+
+    chmod 644 "${php_ini}"
+    success "php/custom.ini dibuat"
 }
 
 # ── Generate Traefik config ──────────────────────────────────────────────────
@@ -1456,6 +1544,7 @@ do_install() {
     generate_env
     generate_compose
     generate_nginx_config
+    generate_php_config
 
     if [ "${REVERSE_PROXY}" = false ]; then
         generate_traefik_config
@@ -1581,6 +1670,8 @@ do_install() {
     echo "  Konfigurasi:   ${INSTALL_DIR}/${ENV_FILE}"
     echo "  Compose:       ${INSTALL_DIR}/${COMPOSE_FILE}"
     echo "  Nginx:         ${INSTALL_DIR}/nginx/default.conf"
+    echo "  PHP:           ${INSTALL_DIR}/php/custom.ini"
+    echo "                 (setelah mengubah, jalankan: ${COMPOSE_CMD} -f ${INSTALL_DIR}/${COMPOSE_FILE} restart app)"
 
     if [ "${REVERSE_PROXY}" = false ]; then
         echo "  Traefik:       ${INSTALL_DIR}/traefik/"
@@ -1772,6 +1863,9 @@ do_update() {
 
     if [ -f "${INSTALL_DIR}/nginx/default.conf" ]; then
         generate_nginx_config
+    fi
+    if grep -q "php/custom.ini" "${compose_file}" 2>/dev/null; then
+        generate_php_config
     fi
     if [ -d "${INSTALL_DIR}/traefik" ]; then
         generate_traefik_config
