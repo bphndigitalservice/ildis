@@ -94,9 +94,14 @@ class MemberController extends Controller
     public function actionPassword($id)
     {
         $model = $this->findModel($id);
-        $model->setPassword(Yii::$app->security->generateRandomString());
+        $newPassword = Yii::$app->security->generateRandomString();
+        $model->setPassword($newPassword);
         $model->save(false);
-        Yii::$app->session->setFlash('success', 'Password user berhasil direset');
+        Yii::$app->session->setFlash(
+            'success',
+            'Password user berhasil direset.<br>Password baru: <b>' . Html::encode($newPassword) . '</b>'
+            . '<br><small>Catat sekarang, password ini hanya ditampilkan sekali.</small>'
+        );
         return $this->redirect(['index']);
     }
 
